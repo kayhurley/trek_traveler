@@ -17,4 +17,10 @@
         android:layout_marginBottom="8dp"
         android:text="really really really really really really really really really really long text" />
 
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textView2"
+        android:text="test"/>
+
 </RelativeLayout>
