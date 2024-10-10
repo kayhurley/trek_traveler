@@ -5,43 +5,29 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
-
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="8dp"
-        android:text="really really really really really really really really really really long text" />
+    tools:context=".MainActivity"
+    android:background="#F1F1F4">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0dp"
         android:orientation="vertical"
+        android:background="@color/white"
         android:paddingLeft="16dp"
         android:paddingBottom="20dp"
         tools:paddingRight="16dp">
 
-        <Button
-            android:id="@+id/button2"
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:backgroundTint="#F00000"
-            android:text="Button" />
+            android:layout_height="wrap_content">
 
-        <CalendarView
-            android:id="@+id/calendarView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-
-        <SearchView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:backgroundTint="#1A000000" />
-
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Calender"
+                android:onClick="goToCalendar"/>
+        </RelativeLayout>
     </LinearLayout>
 
 </RelativeLayout>
