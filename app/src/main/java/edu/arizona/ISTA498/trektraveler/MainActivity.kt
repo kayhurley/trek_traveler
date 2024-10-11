@@ -23,4 +23,9 @@ class MainActivity : AppCompatActivity() {
         val intent = Intent(this, CalenderActivity::class.java)
         startActivity(intent)
     }
+
+    fun goToCityPage(view: View){
+        val intent = Intent(this, CityActivity::class.java)
+        startActivity(intent)
+    }
 }

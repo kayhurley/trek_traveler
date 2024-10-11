@@ -18,16 +18,18 @@
         android:paddingBottom="20dp"
         tools:paddingRight="16dp">
 
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Calender"
                 android:onClick="goToCalendar"/>
-        </RelativeLayout>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="CityPage"
+                android:onClick="goToCityPage"/>
+
     </LinearLayout>
 
 </RelativeLayout>
