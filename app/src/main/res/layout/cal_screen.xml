@@ -21,7 +21,8 @@
         <CalendarView
             android:id="@+id/calendarView"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:weekDayTextAppearance="@color/secondaryText" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -30,11 +31,13 @@
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:textColor="@color/secondaryText"
                 android:text="Cancel"/>
 
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:textColor="@color/Teal"
                 android:text="OK" />
         </LinearLayout>
     </LinearLayout>
