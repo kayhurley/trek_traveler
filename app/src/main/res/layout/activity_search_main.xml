@@ -31,6 +31,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
+        android:contentDescription="Woman riding bike in field"
         app:layout_constraintTop_toBottomOf="@id/topAppBar"/>
 
     <LinearLayout
@@ -49,8 +50,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:backgroundTint="#1A000000"
-            android:contentDescription="Search for location"
-            android:hint="Location"/>
+            android:hint="Location" />
 
         <com.google.android.material.search.SearchBar
             android:id="@+id/searchDate"
@@ -58,7 +58,6 @@
             android:layout_height="wrap_content"
             app:iconEnd="@drawable/ic_clear"
             android:backgroundTint="#1A000000"
-            android:contentDescription="Search for date"
             android:hint="Date"/>
 
         <Button

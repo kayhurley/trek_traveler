@@ -14,19 +14,20 @@
         android:layout_marginTop="0dp"
         android:orientation="vertical"
         android:background="@color/white"
-        android:paddingLeft="16dp"
-        android:paddingBottom="20dp"
-        tools:paddingRight="16dp">
+        android:paddingBottom="20dp">
 
         <CalendarView
             android:id="@+id/calendarView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:weekDayTextAppearance="@color/secondaryText" />
+            android:weekDayTextAppearance="@style/WeekdayTextAppearance"
+            android:selectedWeekBackgroundColor="@color/Teal"/>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
             android:gravity="end">
             <Button
                 android:layout_width="wrap_content"
