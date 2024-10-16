@@ -1,6 +1,7 @@
 package edu.arizona.ISTA498.trektraveler
-
+import android.content.Intent
 import android.os.Bundle
+import android.view.View
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -62,4 +63,14 @@ fun parseArray(json: String): JSONArray? {
 
     return jsonArray
 }
+
+    fun goToCalendar(view: View){
+        val intent = Intent(this, CalenderActivity::class.java)
+        startActivity(intent)
+    }
+
+    fun goToCityPage(view: View){
+        val intent = Intent(this, CityActivity::class.java)
+        startActivity(intent)
+    }
 }

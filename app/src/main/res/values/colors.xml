@@ -7,4 +7,14 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <color name="Teal">#FF23707A</color>
+    <color name="LightBlue">#FF5DBEBF</color>
+    <color name="Green">#FF357A54</color>
+    <color name="darkText">#FF1B1F1D</color>
+    <color name="secondaryText">#FF788481</color>
+    <color name="inverseText">#FFF6FFFC</color>
+    <color name="bkgSection">#FFFFFFFF</color>
+    <color name="bkgSurface">#FFF1F1F4</color>
+
 </resources>
