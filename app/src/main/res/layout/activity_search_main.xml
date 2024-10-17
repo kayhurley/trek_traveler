@@ -45,20 +45,43 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/welcomeImage">
 
-        <com.google.android.material.search.SearchBar
-            android:id="@+id/searchLocation"
-            android:layout_width="match_parent"
+        <Button
+            android:id="@+id/LocationSearch"
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:backgroundTint="#1A000000"
-            android:hint="Location" />
+            android:layout_gravity="center"
+            android:layout_marginTop="16dp"
+            android:layout_marginHorizontal="16dp"
+            android:backgroundTint="#0D000000"
+            android:text="Location"
+            android:textSize="16sp"
+            android:textColor="#555555"
+            android:paddingVertical="4dp"
+            android:paddingStart="8dp"
+            android:gravity="start|center_vertical"
+            android:drawableLeft="@drawable/search"
+            android:drawableTint="#555555"
+            android:drawablePadding="0dp"
+            />
+        <Button
+            android:id="@+id/DateSearch"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="16dp"
+            android:layout_marginHorizontal="16dp"
+            android:backgroundTint="#0D000000"
+            android:text="Date"
+            android:textSize="16sp"
+            android:textColor="#555555"
+            android:paddingVertical="4dp"
+            android:paddingStart="8dp"
+            android:gravity="start|center_vertical"
+            android:drawableLeft="@drawable/date"
+            android:drawableTint="#555555"
+            android:drawablePadding="0dp"
+            />
 
-        <com.google.android.material.search.SearchBar
-            android:id="@+id/searchDate"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:iconEnd="@drawable/ic_clear"
-            android:backgroundTint="#1A000000"
-            android:hint="Date"/>
 
         <Button
             android:id="@+id/rightAlignedButton"
