@@ -14,7 +14,6 @@
         android:background="?attr/colorPrimary"
         android:contentInsetStart="0dp"
         app:navigationIcon="@drawable/smalllogo"
-        app:navigationIconSize="48dp"
         app:title="Green Trek Traveler"
         app:titleCentered="true"
         app:titleTextAppearance="@style/ToolbarTitleTextStyle"
@@ -22,18 +21,18 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
+    <!-- Fixed to android:layout_marginBottom -->
+
     <ImageView
         android:id="@+id/welcomeImage"
         android:layout_width="0dp"
         android:layout_height="180dp"
-        android:layout_marginTop="24dp"
         android:scaleType="centerCrop"
         android:src="@drawable/welcome"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/topAppBar"
-        app:layout_marginBottom="24dp" />
+        tools:layout_editor_absoluteY="64dp" />
 
     <LinearLayout
         android:id="@+id/searchLayout"
@@ -52,19 +51,15 @@
             android:layout_height="wrap_content"
             android:backgroundTint="#1A000000"
             android:contentDescription="Search for location"
-            app:hint="Location"
-            app:iconEnd="@drawable/ic_clear"
-            app:iconStart="@drawable/ic_location"
-            app:layout_marginBottom="0dp" />
+            android:layout_marginBottom="0dp" /> <!-- Fixed to android:layout_marginBottom -->
 
         <com.google.android.material.search.SearchBar
             android:id="@+id/searchDate"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:iconEnd="@drawable/ic_clear"
             android:backgroundTint="#1A000000"
-            android:contentDescription="Search for date"
-            app:hint="Date" />
+            android:contentDescription="Search for date"/>
+            <!--app:hint="Date"-->
 
         <Button
             android:id="@+id/rightAlignedButton"
