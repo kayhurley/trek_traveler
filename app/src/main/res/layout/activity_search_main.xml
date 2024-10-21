@@ -14,7 +14,6 @@
         android:background="?attr/colorPrimary"
         android:contentInsetStart="0dp"
         app:navigationIcon="@drawable/smalllogo"
-        app:navigationIconSize="48dp"
         app:title="Green Trek Traveler"
         app:titleCentered="true"
         app:titleTextAppearance="@style/ToolbarTitleTextStyle"
@@ -26,45 +25,62 @@
         android:id="@+id/welcomeImage"
         android:layout_width="0dp"
         android:layout_height="180dp"
-        android:layout_marginTop="24dp"
         android:scaleType="centerCrop"
         android:src="@drawable/welcome"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/topAppBar"
-        app:layout_marginBottom="24dp" />
+        android:contentDescription="Woman riding bike in field"
+        app:layout_constraintTop_toBottomOf="@id/topAppBar"/>
 
     <LinearLayout
         android:id="@+id/searchLayout"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
+        android:paddingTop="24dp"
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/welcomeImage">
 
-        <com.google.android.material.search.SearchBar
-            android:id="@+id/searchLocation"
-            android:layout_width="match_parent"
+        <Button
+            android:id="@+id/locationSearch"
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:backgroundTint="#1A000000"
-            android:contentDescription="Search for location"
-            app:hint="Location"
-            app:iconEnd="@drawable/ic_clear"
-            app:iconStart="@drawable/ic_location"
-            app:layout_marginBottom="0dp" />
+            android:layout_gravity="center"
+            android:layout_marginTop="16dp"
+            android:layout_marginHorizontal="16dp"
+            android:backgroundTint="#0D000000"
+            android:text="Location"
+            android:textSize="16sp"
+            android:textColor="#555555"
+            android:paddingVertical="4dp"
+            android:paddingStart="8dp"
+            android:gravity="start|center_vertical"
+            android:drawableLeft="@drawable/search"
+            android:drawableTint="#555555"
+            android:drawablePadding="0dp"
+            />
+        <Button
+            android:id="@+id/dateSearch"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="16dp"
+            android:layout_marginHorizontal="16dp"
+            android:backgroundTint="#0D000000"
+            android:text="Date"
+            android:textSize="16sp"
+            android:textColor="#555555"
+            android:paddingVertical="4dp"
+            android:paddingStart="8dp"
+            android:gravity="start|center_vertical"
+            android:drawableLeft="@drawable/date"
+            android:drawableTint="#555555"
+            android:drawablePadding="0dp"
+            />
 
-        <com.google.android.material.search.SearchBar
-            android:id="@+id/searchDate"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:iconEnd="@drawable/ic_clear"
-            android:backgroundTint="#1A000000"
-            android:contentDescription="Search for date"
-            app:hint="Date" />
 
         <Button
             android:id="@+id/rightAlignedButton"
