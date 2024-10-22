@@ -33,6 +33,10 @@
             android:name=".CalenderActivity"
             android:theme="@style/Theme.TrekTraveler">
         </activity>
+        <activity
+            android:name=".CityActivity"
+            android:theme="@style/Theme.TrekTraveler">
+        </activity>
     </application>
 
 </manifest>
