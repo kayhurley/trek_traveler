@@ -13,5 +13,9 @@
         <item name="android:textSize">22sp</item>
         <item name="android:gravity">left</item>
     </style>
-
+    <style name="heading" parent="TextAppearance.Widget.AppCompat.Toolbar.Title">
+        <item name="android:textStyle">bold</item> <!-- Make text bold -->
+        <item name="android:textColor">@color/darkText</item> <!-- Set your desired text color -->
+        <item name="android:textSize">22sp</item>
+    </style>
 </resources>
