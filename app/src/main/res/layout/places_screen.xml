@@ -10,4 +10,3 @@
         android:text="I am the places Tab"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
-    <?xml version="1.0" encoding="utf-8"?>

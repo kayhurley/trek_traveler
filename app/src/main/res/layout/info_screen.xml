@@ -46,7 +46,7 @@ android:layout_height="match_parent">
                     <ImageView
                         android:layout_width="40dp"
                         android:layout_height="40dp"
-                        android:src="@drawable/smalllogo"
+                        android:src="@drawable/cloud"
                         android:layout_marginEnd="16dp" />
 
                     <!-- Weather Details -->
@@ -128,7 +128,8 @@ android:layout_height="match_parent">
                 <ImageView
                     android:layout_width="40dp"
                     android:layout_height="40dp"
-                    android:src="@drawable/smalllogo" />
+                    android:src="@drawable/bike"
+                    app:tint="@color/darkText"/>
 
                 <!-- Biking Details -->
                 <LinearLayout
@@ -162,7 +163,11 @@ android:layout_height="match_parent">
                     android:textColor="@color/darkText"
                     android:textStyle="bold"
                     android:layout_gravity="center"
-                    android:textSize="18sp" />
+                    android:textSize="18sp"
+                    android:gravity="center"
+                    android:background="@drawable/monogram"
+                    android:backgroundTint="@color/accent2"/>
+
             </LinearLayout>
         </com.google.android.material.card.MaterialCardView>
 
@@ -188,7 +193,8 @@ android:layout_height="match_parent">
                 <ImageView
                     android:layout_width="40dp"
                     android:layout_height="40dp"
-                    android:src="@drawable/smalllogo" />
+                    android:src="@drawable/bus"
+                    app:tint="@color/darkText"/>
 
                 <!-- Transit Details -->
                 <LinearLayout
@@ -222,7 +228,10 @@ android:layout_height="match_parent">
                     android:textColor="@color/darkText"
                     android:textStyle="bold"
                     android:layout_gravity="center"
-                    android:textSize="18sp" />
+                    android:textSize="18sp"
+                    android:gravity="center"
+                    android:background="@drawable/monogram"
+                    android:backgroundTint="@color/Teal"/>
             </LinearLayout>
         </com.google.android.material.card.MaterialCardView>
 
@@ -248,7 +257,8 @@ android:layout_height="match_parent">
                 <ImageView
                     android:layout_width="40dp"
                     android:layout_height="40dp"
-                    android:src="@drawable/smalllogo" />
+                    android:src="@drawable/walk"
+                    app:tint="@color/darkText" />
 
                 <!-- Walking Details -->
                 <LinearLayout
@@ -282,7 +292,10 @@ android:layout_height="match_parent">
                     android:textColor="@color/darkText"
                     android:textStyle="bold"
                     android:layout_gravity="center"
-                    android:textSize="18sp" />
+                    android:textSize="18sp"
+                    android:gravity="center"
+                    android:background="@drawable/monogram"
+                    android:backgroundTint="@color/Green"/>
             </LinearLayout>
         </com.google.android.material.card.MaterialCardView>
 
@@ -313,7 +326,7 @@ android:layout_height="match_parent">
             android:layout_height="wrap_content"
             android:paddingHorizontal="16dp"
             android:layout_gravity="right"
-            android:text="WalkScore Data"
+            android:text="@string/walkscore_data"
             android:textColor="@color/Teal"
             android:textSize="14sp"
             android:textStyle="bold"

@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">trek traveler</string>
+    <string name="walkscore_data"><u>Walkscore Data</u></string>
 </resources>

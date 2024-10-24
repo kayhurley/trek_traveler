@@ -16,5 +16,7 @@
     <color name="inverseText">#FFF6FFFC</color>
     <color name="bkgSection">#FFFFFFFF</color>
     <color name="bkgSurface">#FFF1F1F4</color>
+    <color name="accent2">#FFFAAD23</color>
+
 
 </resources>
