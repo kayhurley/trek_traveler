@@ -14,7 +14,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:padding="16dp">
+            android:padding="16dp"
+            >
 
             <!-- Card Title -->
             <TextView
@@ -52,7 +53,6 @@
                     android:layout_marginStart="16dp"
                     android:text="Directions"
                     android:drawableLeft="@drawable/map_pin"
-
                     android:textColor="@color/darkText"
                     android:backgroundTint="@color/LightBlue"
                     android:paddingLeft="12dp"
