@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -14,7 +13,7 @@
         android:id="@+id/topAppBar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="?attr/colorPrimary"
+        android:background="@color/bkgSection"
         android:contentInsetStart="0dp"
         app:navigationIcon="@drawable/smalllogo"
         app:title="Green Trek Traveler"
@@ -27,7 +26,8 @@
         android:layout_height="180dp"
         android:scaleType="centerCrop"
         android:src="@drawable/welcome"
-        android:contentDescription="Woman riding bike in field"/>
+        android:contentDescription="Woman riding bike in field"
+        android:visibility="visible"/> <!-- Ensure this is visible -->
 
     <LinearLayout
         android:id="@+id/searchLayout"
@@ -81,5 +81,4 @@
             android:text="Search"
             android:textColor="@color/inverseText"/>
     </LinearLayout>
-
 </LinearLayout>
