@@ -7,15 +7,18 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import android.content.Intent
+import java.text.SimpleDateFormat
+import java.util.*
+
 
 class CalenderActivity : AppCompatActivity() {
 
-    // Public variable to hold the selected date
     companion object {
-        var selectedDate: Long = 0 // Store the date as milliseconds since epoch
+        var selectedDate: String? = null
     }
-
     override fun onCreate(savedInstanceState: Bundle?) {
+
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.cal_screen)
@@ -32,32 +35,24 @@ class CalenderActivity : AppCompatActivity() {
         val cancelButton: Button = findViewById(R.id.cancelButton)
         val okButton: Button = findViewById(R.id.okayButton)
 
-        // Set the current date as the default selected date
-        calendarView.setDate(System.currentTimeMillis(), true, true)
+        // Set the CalendarView to show today's date
+        calendarView.setDate(System.currentTimeMillis(), false, true)
 
-        // Set an OnDateChangeListener to the CalendarView
-        calendarView.setOnDateChangeListener { _, year, month, dayOfMonth ->
-            // Save the selected date in milliseconds
-            selectedDate = calendarView.date // Get the date in milliseconds
-        }
 
-        // Set up Cancel button action
         cancelButton.setOnClickListener {
-            // Finish the activity (or handle cancel action as needed)
-            finish()
+            finish() // Finish the activity
+        }
+        // Set up the OK button click listener
+        okButton.setOnClickListener {
+            // Get the selected date from the CalendarView
+            val selectedMillis = calendarView.date
+            val selectedDateFormat = SimpleDateFormat("MMM dd, yyyy", Locale.getDefault())
+            selectedDate = selectedDateFormat.format(Date(selectedMillis)) // Format the date
+
+            finish() // Finish the activity
         }
 
-        // Set up OK button action
-        okButton.setOnClickListener {
-            // Handle OK button action, e.g., pass the selected date to another activity
-            // You can also update a button text in another activity if needed
-            // Example: Intent to pass the selected date
-            // val intent = Intent(this, AnotherActivity::class.java)
-            // intent.putExtra("selectedDate", selectedDate)
-            // startActivity(intent)
-            // For demonstration, you could log the selected date
-            println("Selected date: $selectedDate")
-            finish() // Optionally finish the activity
-        }
+
     }
+
 }
