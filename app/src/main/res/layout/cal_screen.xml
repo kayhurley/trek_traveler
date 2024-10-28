@@ -30,12 +30,14 @@
             android:paddingEnd="16dp"
             android:gravity="end">
             <Button
+                android:id="@+id/cancelButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="@color/secondaryText"
                 android:text="Cancel"/>
 
             <Button
+                android:id="@+id/okayButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="@color/Teal"
