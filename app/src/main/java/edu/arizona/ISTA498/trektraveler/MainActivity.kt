@@ -6,6 +6,7 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import kotlinx.coroutines.DelicateCoroutinesApi
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
@@ -25,23 +26,46 @@ class MainActivity : AppCompatActivity() {
             insets
         }
     }
+   @OptIn(DelicateCoroutinesApi::class)
    fun get_walk_score_data() {
        GlobalScope.launch(Dispatchers.IO) {
-            try {
-                val response = URL("https://api.walkscore.com/score?format=json&lat=32.2226&lon=-110.9747&transit=1&bike=1&wsapikey=d874b2705cbb91f53a74fd1003d74fdf").readText()
-                val jsonresponse = parseObject(response)
-                val walk_score = jsonresponse?.getInt("walkscore")
-                val transit = jsonresponse?.getJSONObject("transit")
-                val transit_score = transit?.getInt("score")
-                val bikes = jsonresponse?.getJSONObject("bike")
-                val bike_score = bikes?.getInt("score")
-            print("Walk Score is: " + walk_score)
-            } catch(e: java.lang.Exception) {
-                print(e.message)
-            }
+           try {
+               val response =
+                   URL("https://api.walkscore.com/score?format=json&lat=32.2226&lon=-110.9747&transit=1&bike=1&wsapikey=d874b2705cbb91f53a74fd1003d74fdf").readText()
+               val jsonresponse = parseObject(response)
+               val walk_score = jsonresponse?.getInt("walkscore")
+               val transit = jsonresponse?.getJSONObject("transit")
+               val transit_score = transit?.getInt("score")
+               val bikes = jsonresponse?.getJSONObject("bike")
+               val bike_score = bikes?.getInt("score")
+               print("Walk Score is: " + walk_score)
+               print("Transit Score is: " + transit_score)
+               print("Bike Score is: " + bike_score)
+           } catch (e: java.lang.Exception) {
+               print(e.message)
+           }
+       }
+   }
+   fun get_weather_score_data() {
+       GlobalScope.launch(Dispatchers.I0) {
+           try {
+               val response =
+                   URL("https://api.openweathermap.org/data/2.5/weather?lat=32.2226&lon=-110.9747&appid=772a8fce0fd1f9e51c34f53b07845329").readText()
+               val jsonresponse = parseObject(response)
+               val weather = jsonresponse?.getJSONArray("weather")
+                if (weather.length() > 0) {
+                    val weather_object = weather[0]
+                    val weather_main = weather_object.getString("main")
+                    val weather_description = weather_object.getString("description")
+                }
+
+
+           } catch (e: java.lang.Exception) {
+               print(e.message)
+           }
+
        }
 
-   }
 
 fun parseObject(json: String): JSONObject? {
     var jsonObject: JSONObject? = null
