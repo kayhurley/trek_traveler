@@ -2,6 +2,7 @@ package edu.arizona.ISTA498.trektraveler
 
 import android.content.Intent
 import android.os.Bundle
+import android.view.View
 import android.widget.Button // Import the Button class
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -33,5 +34,10 @@ class SearchMain : AppCompatActivity() {
         if (CalenderActivity.selectedDate != null) {
             dateSearchButton.text = CalenderActivity.selectedDate
         }
+    }
+
+    fun goToCalendarView(view: View) {
+        val intent = Intent(this, CalenderActivity::class.java)
+        startActivity(intent)
     }
 }
