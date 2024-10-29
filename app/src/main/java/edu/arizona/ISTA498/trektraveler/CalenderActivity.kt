@@ -17,8 +17,8 @@ class CalenderActivity : AppCompatActivity() {
     companion object {
         var selectedDate: String? = null
     }
-    override fun onCreate(savedInstanceState: Bundle?) {
 
+    override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.cal_screen)
@@ -38,21 +38,28 @@ class CalenderActivity : AppCompatActivity() {
         // Set the CalendarView to show today's date
         calendarView.setDate(System.currentTimeMillis(), false, true)
 
+        // Listener for when the user selects a different date
+        calendarView.setOnDateChangeListener { _, year, month, dayOfMonth ->
+            // Create a calendar instance to format the selected date
+            val calendar = Calendar.getInstance().apply {
+                set(year, month, dayOfMonth)
+            }
+            // Format the selected date and update the companion object variable
+            val selectedDateFormat = SimpleDateFormat("MMM dd, yyyy", Locale.getDefault())
+            selectedDate = selectedDateFormat.format(calendar.time)
+        }
 
         cancelButton.setOnClickListener {
             finish() // Finish the activity
         }
+
         // Set up the OK button click listener
         okButton.setOnClickListener {
-            // Get the selected date from the CalendarView
-            val selectedMillis = calendarView.date
-            val selectedDateFormat = SimpleDateFormat("MMM dd, yyyy", Locale.getDefault())
-            selectedDate = selectedDateFormat.format(Date(selectedMillis)) // Format the date
-
+            // Optionally update the selected date again on OK click
+            // The selected date is already updated when the user picks a date from the calendar
             finish() // Finish the activity
         }
-
-
     }
-
 }
+
+

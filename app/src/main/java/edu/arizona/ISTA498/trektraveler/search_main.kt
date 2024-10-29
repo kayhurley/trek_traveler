@@ -27,6 +27,10 @@ class SearchMain : AppCompatActivity() {
             insets
         }
 
+    }
+    override fun onResume() {
+        super.onResume()
+
         // Get a reference to the button
         val dateSearchButton: Button = findViewById(R.id.dateSearch)
 
@@ -35,6 +39,7 @@ class SearchMain : AppCompatActivity() {
             dateSearchButton.text = CalenderActivity.selectedDate
         }
     }
+
 
     fun goToCalendarView(view: View) {
         val intent = Intent(this, CalenderActivity::class.java)
