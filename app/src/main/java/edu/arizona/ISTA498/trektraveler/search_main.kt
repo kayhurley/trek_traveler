@@ -45,4 +45,9 @@ class SearchMain : AppCompatActivity() {
         val intent = Intent(this, CalenderActivity::class.java)
         startActivity(intent)
     }
+
+    fun goToLocationView(view: View) {
+        val intent = Intent(this, CityActivity::class.java)
+        startActivity(intent)
+    }
 }
