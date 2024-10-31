@@ -159,14 +159,14 @@ android:layout_height="match_parent">
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="68"
+                    android:text="66"
                     android:textColor="@color/darkText"
                     android:textStyle="bold"
                     android:layout_gravity="center"
                     android:textSize="18sp"
                     android:gravity="center"
                     android:background="@drawable/monogram"
-                    android:backgroundTint="@color/accent2"/>
+                    android:backgroundTint="@color/Teal"/>
 
             </LinearLayout>
         </com.google.android.material.card.MaterialCardView>
@@ -224,14 +224,14 @@ android:layout_height="match_parent">
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="78"
+                    android:text="35"
                     android:textColor="@color/darkText"
                     android:textStyle="bold"
                     android:layout_gravity="center"
                     android:textSize="18sp"
                     android:gravity="center"
                     android:background="@drawable/monogram"
-                    android:backgroundTint="@color/Teal"/>
+                    android:backgroundTint="@color/accent2"/>
             </LinearLayout>
         </com.google.android.material.card.MaterialCardView>
 
@@ -288,14 +288,14 @@ android:layout_height="match_parent">
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="95"
+                    android:text="43"
                     android:textColor="@color/darkText"
                     android:textStyle="bold"
                     android:layout_gravity="center"
                     android:textSize="18sp"
                     android:gravity="center"
                     android:background="@drawable/monogram"
-                    android:backgroundTint="@color/Green"/>
+                    android:backgroundTint="@color/accent2"/>
             </LinearLayout>
         </com.google.android.material.card.MaterialCardView>
 

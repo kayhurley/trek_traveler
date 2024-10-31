@@ -1,51 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".locationSearch">
+    android:orientation="vertical"
+    tools:context=".locationSearch"
+    android:background="@color/bkgSurface">
 
-    <RelativeLayout
-        android:id="@+id/relative_layout"
-        android:layout_width="0dp"
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
-        <com.google.android.material.appbar.MaterialToolbar
-            android:id="@+id/topAppBar"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="?attr/colorPrimary"
-            android:contentInsetStart="0dp"
-            android:padding="0dp"
-            app:title=""
-            app:titleCentered="false"
-            app:navigationIcon="@drawable/back_arrow"
-            app:titleTextAppearance="@style/ToolbarTitleTextStyle"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent" />
+        android:background="@color/bkgSurface"
+        android:contentInsetStart="0dp"
+        android:padding="0dp"
+        app:title="Where are you going?"
+        app:titleCentered="false"
+        app:navigationIcon="@drawable/back_arrow"
+        app:titleTextAppearance="@style/ToolbarTitleTextStyle" />
 
-        <android.widget.SearchView
-            android:id="@+id/search"
-            android:layout_below="@id/topAppBar"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:clickable="true"
-            android:focusable="true"/>
+    <android.widget.SearchView
+        android:id="@+id/search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:iconifiedByDefault="false"
+        android:background="@color/bkgSection"
+        android:focusable="true"
+        android:queryHint="Search for locations"
+        app:theme="@style/SearchViewStyle"
+        />
 
-        <ListView
-            android:id="@+id/list_view"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/search"
-            android:background="@color/bkgSection" />
 
-    </RelativeLayout>
+    <ListView
+        android:id="@+id/list_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/bkgSection"
+        />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

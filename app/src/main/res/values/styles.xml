@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
     <style name="ToolbarTitleTextStyle" parent="TextAppearance.Widget.AppCompat.Toolbar.Title">
         <item name="android:textStyle">bold</item> <!-- Make text bold -->
-        <item name="android:textColor">@color/Green</item> <!-- Set your desired text color -->
+        <item name="android:textColor">@color/darkText</item> <!-- Set your desired text color -->
     </style>
     <style name="WeekdayTextAppearance">
         <item name="android:textColor">@color/secondaryText</item>
@@ -18,4 +19,19 @@
         <item name="android:textColor">@color/darkText</item> <!-- Set your desired text color -->
         <item name="android:textSize">22sp</item>
     </style>
+    <style name="SearchViewStyle" parent="Widget.AppCompat.SearchView">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:editTextColor">@color/darkText</item>
+        <item name="android:textColorHint">#777777</item>
+    </style>
+
+    <style name="ListItemTextViewStyle" parent="android:Widget.TextView">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:padding">16dp</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:background">@color/bkgSection</item>
+        <item name="android:textColor">@color/darkText</item> <!-- Set the text color -->
+    </style>
+
 </resources>
