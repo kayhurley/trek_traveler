@@ -20,7 +20,7 @@
         app:title="Where are you going?"
         app:titleCentered="false"
         app:navigationIcon="@drawable/back_arrow"
-        app:titleTextAppearance="@style/ToolbarTitleTextStyle" />
+        app:titleTextAppearance="@style/ToolbarTitleTextStyleSecondary" />
 
     <android.widget.SearchView
         android:id="@+id/search"

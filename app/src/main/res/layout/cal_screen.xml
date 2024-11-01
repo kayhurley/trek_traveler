@@ -40,7 +40,8 @@
                 android:id="@+id/okayButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="@color/Teal"
+                android:backgroundTint="@color/LightBlue"
+                android:textColor="@color/darkText"
                 android:text="OK" />
         </LinearLayout>
     </LinearLayout>

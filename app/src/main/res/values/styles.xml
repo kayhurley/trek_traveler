@@ -3,6 +3,11 @@
 
     <style name="ToolbarTitleTextStyle" parent="TextAppearance.Widget.AppCompat.Toolbar.Title">
         <item name="android:textStyle">bold</item> <!-- Make text bold -->
+        <item name="android:textColor">@color/Green</item> <!-- Set your desired text color -->
+    </style>
+
+    <style name="ToolbarTitleTextStyleSecondary" parent="TextAppearance.Widget.AppCompat.Toolbar.Title">
+        <item name="android:textStyle">bold</item> <!-- Make text bold -->
         <item name="android:textColor">@color/darkText</item> <!-- Set your desired text color -->
     </style>
     <style name="WeekdayTextAppearance">
