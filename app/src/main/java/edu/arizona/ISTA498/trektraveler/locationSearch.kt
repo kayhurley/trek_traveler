@@ -32,6 +32,12 @@ class locationSearch : AppCompatActivity() {
         setSupportActionBar(toolbar)
         supportActionBar?.setDisplayHomeAsUpEnabled(true) // Show back button in toolbar
 
+        // Set up a listener for the navigation icon (back button)
+        toolbar.setNavigationOnClickListener {
+            finish() // Close the activity without updating selectedLocation
+        }
+
+
         // Initialize the SearchView and ListView
         searchView = findViewById(R.id.search)
         listView = findViewById(R.id.list_view)

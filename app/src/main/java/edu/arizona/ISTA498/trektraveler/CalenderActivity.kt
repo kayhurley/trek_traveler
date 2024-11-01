@@ -35,31 +35,41 @@ class CalenderActivity : AppCompatActivity() {
         val cancelButton: Button = findViewById(R.id.cancelButton)
         val okButton: Button = findViewById(R.id.okayButton)
 
-        // Set the CalendarView to show today's date
-        calendarView.setDate(System.currentTimeMillis(), false, true)
+        // Set today's date as the minimum date
+        val today = Calendar.getInstance()
+        calendarView.minDate = today.timeInMillis
 
-        // Listener for when the user selects a different date
-        calendarView.setOnDateChangeListener { _, year, month, dayOfMonth ->
-            // Create a calendar instance to format the selected date
-            val calendar = Calendar.getInstance().apply {
-                set(year, month, dayOfMonth)
+        // Check if there's a previously selected date
+        if (selectedDate != null) {
+            val dateFormat = SimpleDateFormat("MMM dd, yyyy", Locale.getDefault())
+            val date = dateFormat.parse(selectedDate)
+            date?.let {
+                calendarView.date = it.time // Set calendar to previously selected date
             }
-            // Format the selected date and update the companion object variable
-            val selectedDateFormat = SimpleDateFormat("MMM dd, yyyy", Locale.getDefault())
-            selectedDate = selectedDateFormat.format(calendar.time)
+        } else {
+            calendarView.date = today.timeInMillis // Default to today’s date if no selected date
         }
 
+        // Set listener to detect date selection and update the selected date
+        calendarView.setOnDateChangeListener { _, year, month, dayOfMonth ->
+            val selectedCalendar = Calendar.getInstance().apply {
+                set(year, month, dayOfMonth)
+            }
+            val selectedDateFormat = SimpleDateFormat("MMM dd, yyyy", Locale.getDefault())
+            selectedDate = selectedDateFormat.format(selectedCalendar.time)
+        }
+
+        // Handle Cancel button click
         cancelButton.setOnClickListener {
             finish() // Finish the activity
         }
 
-        // Set up the OK button click listener
+        // Handle OK button click
         okButton.setOnClickListener {
-            // Optionally update the selected date again on OK click
-            // The selected date is already updated when the user picks a date from the calendar
             finish() // Finish the activity
         }
     }
 }
+
 
 
