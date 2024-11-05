@@ -36,8 +36,16 @@
         <activity
             android:name=".locationSearch"
             android:theme="@style/Theme.TrekTraveler">
-
         </activity>
+        <activity
+            android:name=".BikeScreen"
+            android:theme="@style/Theme.TrekTraveler">
+        </activity>
+        <activity
+            android:name=".TransitScreen"
+            android:theme="@style/Theme.TrekTraveler">
+        </activity>
+
 
     </application>
 
