@@ -30,15 +30,15 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
 
-<!--        &lt;!&ndash; Bike ImageView &ndash;&gt;-->
-<!--        <ImageView-->
-<!--            android:id="@+id/bikeImageView"-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:src="@drawable/bike"-->
-<!--            android:paddingHorizontal="16dp"-->
-<!--            android:layout_gravity="start"-->
-<!--            android:layout_marginBottom="16dp" />-->
+        <!-- Bike ImageView -->
+        <ImageView
+            android:id="@+id/bikeImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/bike"
+            android:paddingHorizontal="16dp"
+            android:layout_gravity="start"
+            android:layout_marginBottom="16dp" />
 
         <!-- Linear Progress Bar -->
         <ProgressBar
