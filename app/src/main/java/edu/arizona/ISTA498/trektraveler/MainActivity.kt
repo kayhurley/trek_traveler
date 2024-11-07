@@ -26,6 +26,7 @@ class MainActivity : AppCompatActivity() {
             insets
         }
     }
+
     @OptIn(DelicateCoroutinesApi::class)
     fun get_walk_score_data() {
         GlobalScope.launch(Dispatchers.IO) {
@@ -46,6 +47,7 @@ class MainActivity : AppCompatActivity() {
             }
         }
     }
+
     @OptIn(DelicateCoroutinesApi::class)
     fun get_weather_score_data() {
         GlobalScope.launch(Dispatchers.IO) {
@@ -72,6 +74,7 @@ class MainActivity : AppCompatActivity() {
         }
 
     }
+
     fun get_google_maps_transit_stops() {
         try {
             val JSON_string = "[\n" +
@@ -327,258 +330,6 @@ class MainActivity : AppCompatActivity() {
                     "      ],\n" +
                     "      \"user_ratings_total\":79,\n" +
                     "      \"vicinity\":\"3797 S Kolb Rd, Tucson\"\n" +
-                    "   },\n" +
-                    "   {\n" +
-                    "      \"business_status\":\"OPERATIONAL\",\n" +
-                    "      \"geometry\":{\n" +
-                    "         \"location\":{\n" +
-                    "            \"lat\":32.1777929,\n" +
-                    "            \"lng\":-110.8406468\n" +
-                    "         },\n" +
-                    "         \"viewport\":{\n" +
-                    "            \"northeast\":{\n" +
-                    "               \"lat\":32.17914317989272,\n" +
-                    "               \"lng\":-110.8394075201073\n" +
-                    "            },\n" +
-                    "            \"southwest\":{\n" +
-                    "               \"lat\":32.17644352010727,\n" +
-                    "               \"lng\":-110.8421071798927\n" +
-                    "            }\n" +
-                    "         }\n" +
-                    "      },\n" +
-                    "      \"icon\":\"https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_business-71.png\",\n" +
-                    "      \"icon_background_color\":\"#7B9EB0\",\n" +
-                    "      \"icon_mask_base_uri\":\"https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet\",\n" +
-                    "      \"name\":\"Tucson RZR Rental\",\n" +
-                    "      \"opening_hours\":{\n" +
-                    "         \"open_now\":true\n" +
-                    "      },\n" +
-                    "      \"photos\":[\n" +
-                    "         {\n" +
-                    "            \"height\":3110,\n" +
-                    "            \"html_attributions\":[\n" +
-                    "               \"<a href=\\\"https://maps.google.com/maps/contrib/109409176764721510018\\\">A Google User</a>\"\n" +
-                    "            ],\n" +
-                    "            \"photo_reference\":\"AdCG2DP7zLWxtfNSZN9C5OIiwaGv8F9bJgZsAjpj_bxmFobJdQJ1GzfgFKFaM4X03P1FkfNiMYtx3OudNQ_a0naBsP-thgqU51qPUBxgrGfZKUYCW6Vm85C9PNTIzmJi6-seZkk-hxZvbco4nJCHcxpFk89ikACtiMu8uRrmuUsHROhGnrpN\",\n" +
-                    "            \"width\":4697\n" +
-                    "         }\n" +
-                    "      ],\n" +
-                    "      \"place_id\":\"ChIJO3RqOIRv1oYREXn3bdOjrFg\",\n" +
-                    "      \"plus_code\":{\n" +
-                    "         \"compound_code\":\"55H5+4P Tucson, Arizona\",\n" +
-                    "         \"global_code\":\"854F55H5+4P\"\n" +
-                    "      },\n" +
-                    "      \"rating\":4.6,\n" +
-                    "      \"reference\":\"ChIJO3RqOIRv1oYREXn3bdOjrFg\",\n" +
-                    "      \"scope\":\"GOOGLE\",\n" +
-                    "      \"types\":[\n" +
-                    "         \"travel_agency\",\n" +
-                    "         \"point_of_interest\",\n" +
-                    "         \"establishment\"\n" +
-                    "      ],\n" +
-                    "      \"user_ratings_total\":24,\n" +
-                    "      \"vicinity\":\"3797 S Kolb Rd, Tucson\"\n" +
-                    "   },\n" +
-                    "   {\n" +
-                    "      \"business_status\":\"OPERATIONAL\",\n" +
-                    "      \"geometry\":{\n" +
-                    "         \"location\":{\n" +
-                    "            \"lat\":32.1777929,\n" +
-                    "            \"lng\":-110.8406468\n" +
-                    "         },\n" +
-                    "         \"viewport\":{\n" +
-                    "            \"northeast\":{\n" +
-                    "               \"lat\":32.17913477989271,\n" +
-                    "               \"lng\":-110.8393230201073\n" +
-                    "            },\n" +
-                    "            \"southwest\":{\n" +
-                    "               \"lat\":32.17643512010727,\n" +
-                    "               \"lng\":-110.8420226798927\n" +
-                    "            }\n" +
-                    "         }\n" +
-                    "      },\n" +
-                    "      \"icon\":\"https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_business-71.png\",\n" +
-                    "      \"icon_background_color\":\"#7B9EB0\",\n" +
-                    "      \"icon_mask_base_uri\":\"https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet\",\n" +
-                    "      \"name\":\"Tucson Adventure Rentals\",\n" +
-                    "      \"opening_hours\":{\n" +
-                    "         \"open_now\":true\n" +
-                    "      },\n" +
-                    "      \"photos\":[\n" +
-                    "         {\n" +
-                    "            \"height\":2852,\n" +
-                    "            \"html_attributions\":[\n" +
-                    "               \"<a href=\\\"https://maps.google.com/maps/contrib/108099683749806414873\\\">A Google User</a>\"\n" +
-                    "            ],\n" +
-                    "            \"photo_reference\":\"AdCG2DMD9g7OIVg5MJF2I8uDfHdGeeiUFyu5NR69TvkAtrRyScMFzn4lRAn9vt1FLZ9GABJ5uB7tFgsrWbRqR4Mbc8hLfi_JbZEvmQP1nTEicv5pxTta_IfZ_n0ZMhOm1y8t7fpuFcK69RgHxW1beIKUfM3FLhK0Xn_qBRpvmwmiQ1vpdO1q\",\n" +
-                    "            \"width\":4306\n" +
-                    "         }\n" +
-                    "      ],\n" +
-                    "      \"place_id\":\"ChIJDbEGLJZh1oYRQd2fGwgQ_fI\",\n" +
-                    "      \"plus_code\":{\n" +
-                    "         \"compound_code\":\"55H5+4P Tucson, Arizona\",\n" +
-                    "         \"global_code\":\"854F55H5+4P\"\n" +
-                    "      },\n" +
-                    "      \"rating\":4.7,\n" +
-                    "      \"reference\":\"ChIJDbEGLJZh1oYRQd2fGwgQ_fI\",\n" +
-                    "      \"scope\":\"GOOGLE\",\n" +
-                    "      \"types\":[\n" +
-                    "         \"travel_agency\",\n" +
-                    "         \"point_of_interest\",\n" +
-                    "         \"establishment\"\n" +
-                    "      ],\n" +
-                    "      \"user_ratings_total\":79,\n" +
-                    "      \"vicinity\":\"3797 S Kolb Rd, Tucson\"\n" +
-                    "   },\n" +
-                    "   {\n" +
-                    "      \"business_status\":\"OPERATIONAL\",\n" +
-                    "      \"geometry\":{\n" +
-                    "         \"location\":{\n" +
-                    "            \"lat\":32.1777929,\n" +
-                    "            \"lng\":-110.8406468\n" +
-                    "         },\n" +
-                    "         \"viewport\":{\n" +
-                    "            \"northeast\":{\n" +
-                    "               \"lat\":32.17914317989272,\n" +
-                    "               \"lng\":-110.8394075201073\n" +
-                    "            },\n" +
-                    "            \"southwest\":{\n" +
-                    "               \"lat\":32.17644352010727,\n" +
-                    "               \"lng\":-110.8421071798927\n" +
-                    "            }\n" +
-                    "         }\n" +
-                    "      },\n" +
-                    "      \"icon\":\"https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_business-71.png\",\n" +
-                    "      \"icon_background_color\":\"#7B9EB0\",\n" +
-                    "      \"icon_mask_base_uri\":\"https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet\",\n" +
-                    "      \"name\":\"Tucson RZR Rental\",\n" +
-                    "      \"opening_hours\":{\n" +
-                    "         \"open_now\":true\n" +
-                    "      },\n" +
-                    "      \"photos\":[\n" +
-                    "         {\n" +
-                    "            \"height\":3110,\n" +
-                    "            \"html_attributions\":[\n" +
-                    "               \"<a href=\\\"https://maps.google.com/maps/contrib/109409176764721510018\\\">A Google User</a>\"\n" +
-                    "            ],\n" +
-                    "            \"photo_reference\":\"AdCG2DM20ERcRLpgsOlzGRqDliPD6NvqUIlcE1m0ZRe0qp5U77OyI1hE7f0CjMpaPMXqVag6sk0NeEQWCB6hO0uadrTE17oBSNCH6xownuK1a-tDocqU1TyxcpWyKA8ptxE9X5k1VwV1-UEAMQeHVFxUNrqk3_oCuYvu9WxcCRThd5qzJbRE\",\n" +
-                    "            \"width\":4697\n" +
-                    "         }\n" +
-                    "      ],\n" +
-                    "      \"place_id\":\"ChIJO3RqOIRv1oYREXn3bdOjrFg\",\n" +
-                    "      \"plus_code\":{\n" +
-                    "         \"compound_code\":\"55H5+4P Tucson, Arizona\",\n" +
-                    "         \"global_code\":\"854F55H5+4P\"\n" +
-                    "      },\n" +
-                    "      \"rating\":4.6,\n" +
-                    "      \"reference\":\"ChIJO3RqOIRv1oYREXn3bdOjrFg\",\n" +
-                    "      \"scope\":\"GOOGLE\",\n" +
-                    "      \"types\":[\n" +
-                    "         \"travel_agency\",\n" +
-                    "         \"point_of_interest\",\n" +
-                    "         \"establishment\"\n" +
-                    "      ],\n" +
-                    "      \"user_ratings_total\":24,\n" +
-                    "      \"vicinity\":\"3797 S Kolb Rd, Tucson\"\n" +
-                    "   },\n" +
-                    "   {\n" +
-                    "      \"business_status\":\"OPERATIONAL\",\n" +
-                    "      \"geometry\":{\n" +
-                    "         \"location\":{\n" +
-                    "            \"lat\":32.196318,\n" +
-                    "            \"lng\":-110.9687777\n" +
-                    "         },\n" +
-                    "         \"viewport\":{\n" +
-                    "            \"northeast\":{\n" +
-                    "               \"lat\":32.19766842989272,\n" +
-                    "               \"lng\":-110.9672735701073\n" +
-                    "            },\n" +
-                    "            \"southwest\":{\n" +
-                    "               \"lat\":32.19496877010727,\n" +
-                    "               \"lng\":-110.9699732298927\n" +
-                    "            }\n" +
-                    "         }\n" +
-                    "      },\n" +
-                    "      \"icon\":\"https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_business-71.png\",\n" +
-                    "      \"icon_background_color\":\"#7B9EB0\",\n" +
-                    "      \"icon_mask_base_uri\":\"https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet\",\n" +
-                    "      \"name\":\"Sky Island Bikes\",\n" +
-                    "      \"photos\":[\n" +
-                    "         {\n" +
-                    "            \"height\":3024,\n" +
-                    "            \"html_attributions\":[\n" +
-                    "               \"<a href=\\\"https://maps.google.com/maps/contrib/109910166319311638267\\\">A Google User</a>\"\n" +
-                    "            ],\n" +
-                    "            \"photo_reference\":\"AdCG2DM0WHsgyeVjgLFN3KXvG0g_EqVGtztYh6mjq-YYhI5XBfDuHmghiXtzxLLmoG8P6bfMH-JeHjQakmiBbi_7exg8RuLFNtfJPKRmq05TX811eC8H2t7zoNSHqTYFoixzukNkSN6kuGxlgiwkdwsQLR-WaAABbZkcuPbA1Y1PGwnAi8SH\",\n" +
-                    "            \"width\":4032\n" +
-                    "         }\n" +
-                    "      ],\n" +
-                    "      \"place_id\":\"ChIJr1_RV8hx1oYRmN2_aYWEk5o\",\n" +
-                    "      \"plus_code\":{\n" +
-                    "         \"compound_code\":\"52WJ+GF Tucson, Arizona\",\n" +
-                    "         \"global_code\":\"854F52WJ+GF\"\n" +
-                    "      },\n" +
-                    "      \"rating\":5,\n" +
-                    "      \"reference\":\"ChIJr1_RV8hx1oYRmN2_aYWEk5o\",\n" +
-                    "      \"scope\":\"GOOGLE\",\n" +
-                    "      \"types\":[\n" +
-                    "         \"point_of_interest\",\n" +
-                    "         \"establishment\"\n" +
-                    "      ],\n" +
-                    "      \"user_ratings_total\":30,\n" +
-                    "      \"vicinity\":\"2210 S 6th Ave Ste 5, Tucson\"\n" +
-                    "   },\n" +
-                    "   {\n" +
-                    "      \"business_status\":\"OPERATIONAL\",\n" +
-                    "      \"geometry\":{\n" +
-                    "         \"location\":{\n" +
-                    "            \"lat\":32.1784054,\n" +
-                    "            \"lng\":-110.9514553\n" +
-                    "         },\n" +
-                    "         \"viewport\":{\n" +
-                    "            \"northeast\":{\n" +
-                    "               \"lat\":32.17964822989272,\n" +
-                    "               \"lng\":-110.9499714201073\n" +
-                    "            },\n" +
-                    "            \"southwest\":{\n" +
-                    "               \"lat\":32.17694857010728,\n" +
-                    "               \"lng\":-110.9526710798927\n" +
-                    "            }\n" +
-                    "         }\n" +
-                    "      },\n" +
-                    "      \"icon\":\"https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/shopping-71.png\",\n" +
-                    "      \"icon_background_color\":\"#4B96F3\",\n" +
-                    "      \"icon_mask_base_uri\":\"https://maps.gstatic.com/mapfiles/place_api/icons/v2/shopping_pinlet\",\n" +
-                    "      \"name\":\"Ajo Bikes\",\n" +
-                    "      \"opening_hours\":{\n" +
-                    "         \"open_now\":true\n" +
-                    "      },\n" +
-                    "      \"photos\":[\n" +
-                    "         {\n" +
-                    "            \"height\":3072,\n" +
-                    "            \"html_attributions\":[\n" +
-                    "               \"<a href=\\\"https://maps.google.com/maps/contrib/116565735029084260597\\\">Kris Bjelk</a>\"\n" +
-                    "            ],\n" +
-                    "            \"photo_reference\":\"AdCG2DNNQBJ6HpgQGFPQH6XDCs-1R3nKhZV1tcFeAaVb8mdLaX0Eryz1VE1cD7NY57J5GO3-VYG6RPediy1CZxoLiysBpCVJIYNASWTpglhz3p4g60gSA2wXt1WXeGtz8lNHAIOKGelbJHy5h_pD6lFOncysERPeFsMYQtT8r5wta-XATOOy\",\n" +
-                    "            \"width\":4080\n" +
-                    "         }\n" +
-                    "      ],\n" +
-                    "      \"place_id\":\"ChIJ3XkIc3561oYREWGVi5l2vHQ\",\n" +
-                    "      \"plus_code\":{\n" +
-                    "         \"compound_code\":\"52HX+9C Tucson, Arizona\",\n" +
-                    "         \"global_code\":\"854F52HX+9C\"\n" +
-                    "      },\n" +
-                    "      \"rating\":4.8,\n" +
-                    "      \"reference\":\"ChIJ3XkIc3561oYREWGVi5l2vHQ\",\n" +
-                    "      \"scope\":\"GOOGLE\",\n" +
-                    "      \"types\":[\n" +
-                    "         \"bicycle_store\",\n" +
-                    "         \"store\",\n" +
-                    "         \"point_of_interest\",\n" +
-                    "         \"establishment\"\n" +
-                    "      ],\n" +
-                    "      \"user_ratings_total\":622,\n" +
-                    "      \"vicinity\":\"1301 E Ajo Way #117, Tucson\"\n" +
                     "   }\n" +
                     "]"
             val JSON_response = parseArray("JSON_string")
@@ -586,13 +337,17 @@ class MainActivity : AppCompatActivity() {
                 val business_object = JSON_response?.getJSONObject(i)
                 val geometry_object = business_object?.getJSONObject("geometry")
                 val location_object = geometry_object?.getJSONObject("location")
+
                 val latitude = location_object?.getDouble("lat")
+
                 val longitude = location_object?.getDouble("lng")
             }
         } catch (e: JSONException) {
-            e.printStackTrace()}
+            e.printStackTrace()
+        }
     }
-}
+
+
 
 
 
@@ -851,259 +606,9 @@ class MainActivity : AppCompatActivity() {
                     "        ],\n" +
                     "        \"user_ratings_total\": 79,\n" +
                     "        \"vicinity\": \"3797 S Kolb Rd, Tucson\"\n" +
-                    "    },\n" +
-                    "    {\n" +
-                    "        \"business_status\": \"OPERATIONAL\",\n" +
-                    "        \"geometry\": {\n" +
-                    "            \"location\": {\n" +
-                    "                \"lat\": 32.1777929,\n" +
-                    "                \"lng\": -110.8406468\n" +
-                    "            },\n" +
-                    "            \"viewport\": {\n" +
-                    "                \"northeast\": {\n" +
-                    "                    \"lat\": 32.17914317989272,\n" +
-                    "                    \"lng\": -110.8394075201073\n" +
-                    "                },\n" +
-                    "                \"southwest\": {\n" +
-                    "                    \"lat\": 32.17644352010727,\n" +
-                    "                    \"lng\": -110.8421071798927\n" +
-                    "                }\n" +
-                    "            }\n" +
-                    "        },\n" +
-                    "        \"icon\": \"https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_business-71.png\",\n" +
-                    "        \"icon_background_color\": \"#7B9EB0\",\n" +
-                    "        \"icon_mask_base_uri\": \"https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet\",\n" +
-                    "        \"name\": \"Tucson RZR Rental\",\n" +
-                    "        \"opening_hours\": {\n" +
-                    "            \"open_now\": true\n" +
-                    "        },\n" +
-                    "        \"photos\": [\n" +
-                    "            {\n" +
-                    "                \"height\": 3110,\n" +
-                    "                \"html_attributions\": [\n" +
-                    "                    \"<a href=\\\"https://maps.google.com/maps/contrib/109409176764721510018\\\">A Google User</a>\"\n" +
-                    "                ],\n" +
-                    "                \"photo_reference\": \"AdCG2DP7zLWxtfNSZN9C5OIiwaGv8F9bJgZsAjpj_bxmFobJdQJ1GzfgFKFaM4X03P1FkfNiMYtx3OudNQ_a0naBsP-thgqU51qPUBxgrGfZKUYCW6Vm85C9PNTIzmJi6-seZkk-hxZvbco4nJCHcxpFk89ikACtiMu8uRrmuUsHROhGnrpN\",\n" +
-                    "                \"width\": 4697\n" +
-                    "            }\n" +
-                    "        ],\n" +
-                    "        \"place_id\": \"ChIJO3RqOIRv1oYREXn3bdOjrFg\",\n" +
-                    "        \"plus_code\": {\n" +
-                    "            \"compound_code\": \"55H5+4P Tucson, Arizona\",\n" +
-                    "            \"global_code\": \"854F55H5+4P\"\n" +
-                    "        },\n" +
-                    "        \"rating\": 4.6,\n" +
-                    "        \"reference\": \"ChIJO3RqOIRv1oYREXn3bdOjrFg\",\n" +
-                    "        \"scope\": \"GOOGLE\",\n" +
-                    "        \"types\": [\n" +
-                    "            \"travel_agency\",\n" +
-                    "            \"point_of_interest\",\n" +
-                    "            \"establishment\"\n" +
-                    "        ],\n" +
-                    "        \"user_ratings_total\": 24,\n" +
-                    "        \"vicinity\": \"3797 S Kolb Rd, Tucson\"\n" +
-                    "    },\n" +
-                    "    {\n" +
-                    "        \"business_status\": \"OPERATIONAL\",\n" +
-                    "        \"geometry\": {\n" +
-                    "            \"location\": {\n" +
-                    "                \"lat\": 32.1777929,\n" +
-                    "                \"lng\": -110.8406468\n" +
-                    "            },\n" +
-                    "            \"viewport\": {\n" +
-                    "                \"northeast\": {\n" +
-                    "                    \"lat\": 32.17913477989271,\n" +
-                    "                    \"lng\": -110.8393230201073\n" +
-                    "                },\n" +
-                    "                \"southwest\": {\n" +
-                    "                    \"lat\": 32.17643512010727,\n" +
-                    "                    \"lng\": -110.8420226798927\n" +
-                    "                }\n" +
-                    "            }\n" +
-                    "        },\n" +
-                    "        \"icon\": \"https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_business-71.png\",\n" +
-                    "        \"icon_background_color\": \"#7B9EB0\",\n" +
-                    "        \"icon_mask_base_uri\": \"https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet\",\n" +
-                    "        \"name\": \"Tucson Adventure Rentals\",\n" +
-                    "        \"opening_hours\": {\n" +
-                    "            \"open_now\": true\n" +
-                    "        },\n" +
-                    "        \"photos\": [\n" +
-                    "            {\n" +
-                    "                \"height\": 2852,\n" +
-                    "                \"html_attributions\": [\n" +
-                    "                    \"<a href=\\\"https://maps.google.com/maps/contrib/108099683749806414873\\\">A Google User</a>\"\n" +
-                    "                ],\n" +
-                    "                \"photo_reference\": \"AdCG2DMD9g7OIVg5MJF2I8uDfHdGeeiUFyu5NR69TvkAtrRyScMFzn4lRAn9vt1FLZ9GABJ5uB7tFgsrWbRqR4Mbc8hLfi_JbZEvmQP1nTEicv5pxTta_IfZ_n0ZMhOm1y8t7fpuFcK69RgHxW1beIKUfM3FLhK0Xn_qBRpvmwmiQ1vpdO1q\",\n" +
-                    "                \"width\": 4306\n" +
-                    "            }\n" +
-                    "        ],\n" +
-                    "        \"place_id\": \"ChIJDbEGLJZh1oYRQd2fGwgQ_fI\",\n" +
-                    "        \"plus_code\": {\n" +
-                    "            \"compound_code\": \"55H5+4P Tucson, Arizona\",\n" +
-                    "            \"global_code\": \"854F55H5+4P\"\n" +
-                    "        },\n" +
-                    "        \"rating\": 4.7,\n" +
-                    "        \"reference\": \"ChIJDbEGLJZh1oYRQd2fGwgQ_fI\",\n" +
-                    "        \"scope\": \"GOOGLE\",\n" +
-                    "        \"types\": [\n" +
-                    "            \"travel_agency\",\n" +
-                    "            \"point_of_interest\",\n" +
-                    "            \"establishment\"\n" +
-                    "        ],\n" +
-                    "        \"user_ratings_total\": 79,\n" +
-                    "        \"vicinity\": \"3797 S Kolb Rd, Tucson\"\n" +
-                    "    },\n" +
-                    "    {\n" +
-                    "        \"business_status\": \"OPERATIONAL\",\n" +
-                    "        \"geometry\": {\n" +
-                    "            \"location\": {\n" +
-                    "                \"lat\": 32.1777929,\n" +
-                    "                \"lng\": -110.8406468\n" +
-                    "            },\n" +
-                    "            \"viewport\": {\n" +
-                    "                \"northeast\": {\n" +
-                    "                    \"lat\": 32.17914317989272,\n" +
-                    "                    \"lng\": -110.8394075201073\n" +
-                    "                },\n" +
-                    "                \"southwest\": {\n" +
-                    "                    \"lat\": 32.17644352010727,\n" +
-                    "                    \"lng\": -110.8421071798927\n" +
-                    "                }\n" +
-                    "            }\n" +
-                    "        },\n" +
-                    "        \"icon\": \"https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_business-71.png\",\n" +
-                    "        \"icon_background_color\": \"#7B9EB0\",\n" +
-                    "        \"icon_mask_base_uri\": \"https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet\",\n" +
-                    "        \"name\": \"Tucson RZR Rental\",\n" +
-                    "        \"opening_hours\": {\n" +
-                    "            \"open_now\": true\n" +
-                    "        },\n" +
-                    "        \"photos\": [\n" +
-                    "            {\n" +
-                    "                \"height\": 3110,\n" +
-                    "                \"html_attributions\": [\n" +
-                    "                    \"<a href=\\\"https://maps.google.com/maps/contrib/109409176764721510018\\\">A Google User</a>\"\n" +
-                    "                ],\n" +
-                    "                \"photo_reference\": \"AdCG2DM20ERcRLpgsOlzGRqDliPD6NvqUIlcE1m0ZRe0qp5U77OyI1hE7f0CjMpaPMXqVag6sk0NeEQWCB6hO0uadrTE17oBSNCH6xownuK1a-tDocqU1TyxcpWyKA8ptxE9X5k1VwV1-UEAMQeHVFxUNrqk3_oCuYvu9WxcCRThd5qzJbRE\",\n" +
-                    "                \"width\": 4697\n" +
-                    "            }\n" +
-                    "        ],\n" +
-                    "        \"place_id\": \"ChIJO3RqOIRv1oYREXn3bdOjrFg\",\n" +
-                    "        \"plus_code\": {\n" +
-                    "            \"compound_code\": \"55H5+4P Tucson, Arizona\",\n" +
-                    "            \"global_code\": \"854F55H5+4P\"\n" +
-                    "        },\n" +
-                    "        \"rating\": 4.6,\n" +
-                    "        \"reference\": \"ChIJO3RqOIRv1oYREXn3bdOjrFg\",\n" +
-                    "        \"scope\": \"GOOGLE\",\n" +
-                    "        \"types\": [\n" +
-                    "            \"travel_agency\",\n" +
-                    "            \"point_of_interest\",\n" +
-                    "            \"establishment\"\n" +
-                    "        ],\n" +
-                    "        \"user_ratings_total\": 24,\n" +
-                    "        \"vicinity\": \"3797 S Kolb Rd, Tucson\"\n" +
-                    "    },\n" +
-                    "    {\n" +
-                    "        \"business_status\": \"OPERATIONAL\",\n" +
-                    "        \"geometry\": {\n" +
-                    "            \"location\": {\n" +
-                    "                \"lat\": 32.196318,\n" +
-                    "                \"lng\": -110.9687777\n" +
-                    "            },\n" +
-                    "            \"viewport\": {\n" +
-                    "                \"northeast\": {\n" +
-                    "                    \"lat\": 32.19766842989272,\n" +
-                    "                    \"lng\": -110.9672735701073\n" +
-                    "                },\n" +
-                    "                \"southwest\": {\n" +
-                    "                    \"lat\": 32.19496877010727,\n" +
-                    "                    \"lng\": -110.9699732298927\n" +
-                    "                }\n" +
-                    "            }\n" +
-                    "        },\n" +
-                    "        \"icon\": \"https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_business-71.png\",\n" +
-                    "        \"icon_background_color\": \"#7B9EB0\",\n" +
-                    "        \"icon_mask_base_uri\": \"https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet\",\n" +
-                    "        \"name\": \"Sky Island Bikes\",\n" +
-                    "        \"photos\": [\n" +
-                    "            {\n" +
-                    "                \"height\": 3024,\n" +
-                    "                \"html_attributions\": [\n" +
-                    "                    \"<a href=\\\"https://maps.google.com/maps/contrib/109910166319311638267\\\">A Google User</a>\"\n" +
-                    "                ],\n" +
-                    "                \"photo_reference\": \"AdCG2DM0WHsgyeVjgLFN3KXvG0g_EqVGtztYh6mjq-YYhI5XBfDuHmghiXtzxLLmoG8P6bfMH-JeHjQakmiBbi_7exg8RuLFNtfJPKRmq05TX811eC8H2t7zoNSHqTYFoixzukNkSN6kuGxlgiwkdwsQLR-WaAABbZkcuPbA1Y1PGwnAi8SH\",\n" +
-                    "                \"width\": 4032\n" +
-                    "            }\n" +
-                    "        ],\n" +
-                    "        \"place_id\": \"ChIJr1_RV8hx1oYRmN2_aYWEk5o\",\n" +
-                    "        \"plus_code\": {\n" +
-                    "            \"compound_code\": \"52WJ+GF Tucson, Arizona\",\n" +
-                    "            \"global_code\": \"854F52WJ+GF\"\n" +
-                    "        },\n" +
-                    "        \"rating\": 5,\n" +
-                    "        \"reference\": \"ChIJr1_RV8hx1oYRmN2_aYWEk5o\",\n" +
-                    "        \"scope\": \"GOOGLE\",\n" +
-                    "        \"types\": [\n" +
-                    "            \"point_of_interest\",\n" +
-                    "            \"establishment\"\n" +
-                    "        ],\n" +
-                    "        \"user_ratings_total\": 30,\n" +
-                    "        \"vicinity\": \"2210 S 6th Ave Ste 5, Tucson\"\n" +
-                    "    },\n" +
-                    "    {\n" +
-                    "        \"business_status\": \"OPERATIONAL\",\n" +
-                    "        \"geometry\": {\n" +
-                    "            \"location\": {\n" +
-                    "                \"lat\": 32.1784054,\n" +
-                    "                \"lng\": -110.9514553\n" +
-                    "            },\n" +
-                    "            \"viewport\": {\n" +
-                    "                \"northeast\": {\n" +
-                    "                    \"lat\": 32.17964822989272,\n" +
-                    "                    \"lng\": -110.9499714201073\n" +
-                    "                },\n" +
-                    "                \"southwest\": {\n" +
-                    "                    \"lat\": 32.17694857010728,\n" +
-                    "                    \"lng\": -110.9526710798927\n" +
-                    "                }\n" +
-                    "            }\n" +
-                    "        },\n" +
-                    "        \"icon\": \"https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/shopping-71.png\",\n" +
-                    "        \"icon_background_color\": \"#4B96F3\",\n" +
-                    "        \"icon_mask_base_uri\": \"https://maps.gstatic.com/mapfiles/place_api/icons/v2/shopping_pinlet\",\n" +
-                    "        \"name\": \"Ajo Bikes\",\n" +
-                    "        \"opening_hours\": {\n" +
-                    "            \"open_now\": true\n" +
-                    "        },\n" +
-                    "        \"photos\": [\n" +
-                    "            {\n" +
-                    "                \"height\": 3072,\n" +
-                    "                \"html_attributions\": [\n" +
-                    "                    \"<a href=\\\"https://maps.google.com/maps/contrib/116565735029084260597\\\">Kris Bjelk</a>\"\n" +
-                    "                ],\n" +
-                    "                \"photo_reference\": \"AdCG2DNNQBJ6HpgQGFPQH6XDCs-1R3nKhZV1tcFeAaVb8mdLaX0Eryz1VE1cD7NY57J5GO3-VYG6RPediy1CZxoLiysBpCVJIYNASWTpglhz3p4g60gSA2wXt1WXeGtz8lNHAIOKGelbJHy5h_pD6lFOncysERPeFsMYQtT8r5wta-XATOOy\",\n" +
-                    "                \"width\": 4080\n" +
-                    "            }\n" +
-                    "        ],\n" +
-                    "        \"place_id\": \"ChIJ3XkIc3561oYREWGVi5l2vHQ\",\n" +
-                    "        \"plus_code\": {\n" +
-                    "            \"compound_code\": \"52HX+9C Tucson, Arizona\",\n" +
-                    "            \"global_code\": \"854F52HX+9C\"\n" +
-                    "        },\n" +
-                    "        \"rating\": 4.8,\n" +
-                    "        \"reference\": \"ChIJ3XkIc3561oYREWGVi5l2vHQ\",\n" +
-                    "        \"scope\": \"GOOGLE\",\n" +
-                    "        \"types\": [\n" +
-                    "            \"bicycle_store\",\n" +
-                    "            \"store\",\n" +
-                    "            \"point_of_interest\",\n" +
-                    "            \"establishment\"\n" +
-                    "        ],\n" +
-                    "        \"user_ratings_total\": 622,\n" +
-                    "        \"vicinity\": \"1301 E Ajo Way #117, Tucson\"\n" +
-                    "    }]"
+                    "    }\n"+
+                    "]"
+
             val JSON_response = parseArray("JSON_string")
             for (i in 0 until (JSON_response?.length() ?: 0)) {
                 val business_object = JSON_response?.getJSONObject(i)
@@ -1122,6 +627,7 @@ class MainActivity : AppCompatActivity() {
             e.printStackTrace()}
         }
     }
+
     fun parseObject(json: String): JSONObject? {
         var jsonObject: JSONObject? = null
         try {
