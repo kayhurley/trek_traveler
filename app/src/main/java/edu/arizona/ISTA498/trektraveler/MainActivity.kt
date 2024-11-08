@@ -340,11 +340,11 @@ class MainActivity : AppCompatActivity() {
                 val geometry_object = business_object?.getJSONObject("geometry")
                 val location_object = geometry_object?.getJSONObject("location")
 
-                val latitude = location_object?.getDouble("lat")
+                val latitude = location_object?.getDouble("lat") ?: 0.0
 
-                val longitude = location_object?.getDouble("lng")
+                val longitude = location_object?.getDouble("lng") ?: 0.0
 
-                val transitShop = TransitShop(lat, lng)
+                val transitShop = TransitShop(latitude, longitude)
                 allTransitShops.add(transitShop)
             }
         } catch (e: JSONException) {
@@ -619,17 +619,17 @@ class MainActivity : AppCompatActivity() {
                 val business_object = JSON_response?.getJSONObject(i)
                 val geometry_object = business_object?.getJSONObject("geometry")
                 val location_object = geometry_object?.getJSONObject("location")
-                val latitude = location_object?.getDouble("lat")
-                val longitude = location_object?.getDouble("lng")
+                val latitude = location_object?.getDouble("lat") ?:0.0
+                val longitude = location_object?.getDouble("lng") ?: 0.0
 
-                val business_name = business_object?.getString("name")
+                val business_name = business_object?.getString("name") ?: "Unknown"
 
                 val business_rating = business_object?.getDouble("rating")
 
                 val business_vicinity = business_object?.getString("vicinity")
 
 
-                val bikeShop = BikeShop(lat, lng, name)
+                val bikeShop = BikeShop(latitude, longitude, business_name)
                 allBikeShops.add(bikeShop)
             }
         } catch (e: JSONException) {
@@ -659,16 +659,16 @@ class MainActivity : AppCompatActivity() {
 
         return jsonArray
     }
-
-    fun goToCalendar(view: View) {
-        val intent = Intent(this, CalenderActivity::class.java)
-        startActivity(intent)
-    }
-
-    fun goToCityPage(view: View) {
-        val intent = Intent(this, CityActivity::class.java)
-        startActivity(intent)
-    }
+//
+//    fun goToCalendar(view: View) {
+//        val intent = Intent(this, CalenderActivity::class.java)
+//        startActivity(intent)
+//    }
+//
+//    fun goToCityPage(view: View) {
+//        val intent = Intent(this, CityActivity::class.java)
+//        startActivity(intent)
+//    }
 
 class BikeShop(
     val lat: Double,
@@ -677,5 +677,5 @@ class BikeShop(
 )
 class TransitShop(
     val lat: Double,
-    val lng: DOuble
+    val lng: Double
 )
