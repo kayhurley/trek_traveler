@@ -16,6 +16,8 @@ import org.json.JSONObject
 import java.net.URL
 
 class MainActivity : AppCompatActivity() {
+    var allBikeShops = ArrayList<BikeShop>()
+    var allTransitShops = ArrayList<TransitShop>()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -341,6 +343,9 @@ class MainActivity : AppCompatActivity() {
                 val latitude = location_object?.getDouble("lat")
 
                 val longitude = location_object?.getDouble("lng")
+
+                val transitShop = TransitShop(lat, lng)
+                allTransitShops.add(transitShop)
             }
         } catch (e: JSONException) {
             e.printStackTrace()
@@ -622,11 +627,17 @@ class MainActivity : AppCompatActivity() {
                 val business_rating = business_object?.getDouble("rating")
 
                 val business_vicinity = business_object?.getString("vicinity")
+
+
+                val bikeShop = BikeShop(lat, lng, name)
+                allBikeShops.add(bikeShop)
             }
         } catch (e: JSONException) {
             e.printStackTrace()}
         }
     }
+
+
 
     fun parseObject(json: String): JSONObject? {
         var jsonObject: JSONObject? = null
@@ -658,4 +669,13 @@ class MainActivity : AppCompatActivity() {
         val intent = Intent(this, CityActivity::class.java)
         startActivity(intent)
     }
-}
+
+class BikeShop(
+    val lat: Double,
+    val lng: Double,
+    val name: String
+)
+class TransitShop(
+    val lat: Double,
+    val lng: DOuble
+)
