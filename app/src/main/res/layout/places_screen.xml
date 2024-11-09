@@ -74,7 +74,7 @@
                             android:id="@+id/bikeRentalCardTitle1"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Bike Rental Location 1"
+                            android:text="Winston Reynolds - Manzanita Park"
                             android:textColor="@color/darkText"
                             android:textSize="18sp"
                             android:textStyle="bold" />
@@ -83,7 +83,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Rental description"
+                            android:text="5200 S Westover Ave, Tucson"
                             android:textColor="@color/secondaryText"
                             android:textSize="14sp" />
 
@@ -132,7 +132,7 @@
                             android:id="@+id/bikeRentalCardTitle2"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Bike Rental Location 2"
+                            android:text="Ajo Bikes"
                             android:textColor="@color/darkText"
                             android:textSize="18sp"
                             android:textStyle="bold" />
@@ -141,7 +141,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Rental description"
+                            android:text="1301 E Ajo Way #117"
                             android:textColor="@color/secondaryText"
                             android:textSize="14sp" />
 
