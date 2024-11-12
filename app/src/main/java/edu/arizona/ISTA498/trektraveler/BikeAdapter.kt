@@ -9,6 +9,7 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.TextView
 import android.widget.BaseAdapter
+import androidx.core.content.ContextCompat
 import com.google.android.material.card.MaterialCardView
 
 class BikeAdapter(private val context: Context, private val bikeShops: List<BikeShop>) : BaseAdapter() {
@@ -33,9 +34,11 @@ class BikeAdapter(private val context: Context, private val bikeShops: List<Bike
         val cardTitle = view.findViewById<TextView>(R.id.cardTitle)
         val cardDescription = view.findViewById<TextView>(R.id.cardDescription)
         val directionsButton = view.findViewById<Button>(R.id.directionsButton)
+        val backgroundColor = view.findViewById<MaterialCardView>(R.id.cardView)
 
         cardTitle.text = bikeShop.name
         cardDescription.text = "Located at: ${bikeShop.vicinity}"
+        backgroundColor.setCardBackgroundColor(ContextCompat.getColor(context, R.color.bkgSection))
 
         directionsButton.setOnClickListener {
             val uri = Uri.parse("geo:${bikeShop.latitude},${bikeShop.longitude}?q=${Uri.encode(bikeShop.name)}")

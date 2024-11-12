@@ -9,6 +9,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import android.widget.TextView
 import androidx.core.content.ContextCompat
+import com.google.android.material.appbar.MaterialToolbar
 
 class locationSearch : AppCompatActivity() {
 

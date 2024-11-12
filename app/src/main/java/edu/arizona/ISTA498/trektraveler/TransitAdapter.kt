@@ -7,6 +7,8 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.TextView
 import android.widget.BaseAdapter
+import androidx.core.content.ContextCompat
+import com.google.android.material.card.MaterialCardView
 import edu.arizona.ISTA498.trektraveler.R
 import edu.arizona.ISTA498.trektraveler.TransitShop
 
@@ -26,6 +28,7 @@ class TransitAdapter(private val context: Context, private val transitStops: Lis
         // Using card IDs from previous material card file.
         view.findViewById<TextView>(R.id.cardTitle).text = stop.name
         view.findViewById<TextView>(R.id.cardDescription).text = stop.vicinity
+        view.findViewById<MaterialCardView>(R.id.cardView).setCardBackgroundColor(ContextCompat.getColor(context, R.color.bkgSection))
 
         // Setup Directions Button
         view.findViewById<Button>(R.id.directionsButton).setOnClickListener {
