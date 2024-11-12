@@ -1,77 +1,65 @@
 <?xml version="1.0" encoding="utf-8"?>
 
     <!-- Sample CardView -->
-    <com.google.android.material.card.MaterialCardView
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="8dp"
+    android:background="@color/bkgSection"
+    app:strokeColor="@android:color/transparent"
+    android:layout_marginBottom="16dp">
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:cardCornerRadius="8dp"
-        android:background="@color/bkgSection"
-        app:strokeColor="@android:color/transparent"
-        android:layout_marginBottom="16dp">
+        android:orientation="vertical"
+        android:padding="16dp">
 
+        <!-- Card Title -->
+        <TextView
+            android:id="@+id/cardTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bike Rental 1"
+            android:textColor="@color/darkText"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <!-- Card Description -->
+        <TextView
+            android:id="@+id/cardDescription"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Rental information here."
+            android:textColor="@color/secondaryText"
+            android:textSize="14sp" />
+
+        <!-- Buttons for Directions and Website -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:padding="16dp"
-            >
+            android:orientation="horizontal"
+            android:layout_marginTop="16dp"
+            android:gravity="end">
 
-            <!-- Card Title -->
-            <TextView
-                android:id="@+id/cardTitle"
+            <!-- Website Button -->
+
+            <!-- Get Directions Button -->
+            <Button
+                android:id="@+id/directionsButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Bike Rental 1"
+                android:layout_marginStart="16dp"
+                android:text="Directions"
+                android:drawableLeft="@drawable/map_pin"
                 android:textColor="@color/darkText"
-                android:textSize="18sp"
-                android:textStyle="bold" />
-
-            <!-- Card Description -->
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Rental information here."
-                android:textColor="@color/secondaryText"
-                android:textSize="14sp" />
-
-            <!-- Buttons for Directions and Website -->
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginTop="16dp"
-                android:gravity="end">
-
-                <!-- Website Button -->
-                <com.google.android.material.button.MaterialButton
-                    android:id="@+id/websiteButton"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Website"
-                    android:textColor="@color/secondaryText"
-                    android:backgroundTint="@android:color/transparent"
-                    app:strokeWidth="1dp"
-                    app:strokeColor="@color/secondaryText"
-                    android:paddingHorizontal="16dp"/>
-
-                <!-- Get Directions Button -->
-                <Button
-                    android:id="@+id/directionsButton"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="16dp"
-                    android:text="Directions"
-                    android:drawableLeft="@drawable/map_pin"
-
-                    android:textColor="@color/darkText"
-                    android:backgroundTint="@color/LightBlue"
-                    android:paddingLeft="12dp"
-                    android:paddingRight="16dp"/>
-
-            </LinearLayout>
+                android:backgroundTint="@color/LightBlue"
+                android:paddingLeft="12dp"
+                android:paddingRight="16dp" />
 
         </LinearLayout>
-    </com.google.android.material.card.MaterialCardView>
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>
 

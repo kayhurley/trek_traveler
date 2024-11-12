@@ -29,6 +29,7 @@
 
             <!-- Card Description -->
             <TextView
+                android:id="@+id/cardDescription"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Type of Transit"
