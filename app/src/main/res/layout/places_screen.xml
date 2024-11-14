@@ -225,7 +225,7 @@
                         android:id="@+id/cardTitle"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Broadway/Tucson (SE)"
+                        android:text="Los Reales/Cardinal"
                         android:textColor="@color/darkText"
                         android:textSize="18sp"
                         android:textStyle="bold" />
@@ -282,7 +282,7 @@
                         android:id="@+id/cardTitle2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Broadway/Tucson (NE)"
+                        android:text="Cardinal/Pajarito"
                         android:textColor="@color/darkText"
                         android:textSize="18sp"
                         android:textStyle="bold" />
