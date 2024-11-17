@@ -27,7 +27,7 @@ class TransitAdapter(private val context: Context, private val transitStops: Lis
 
         // Using card IDs from previous material card file.
         view.findViewById<TextView>(R.id.cardTitle).text = stop.name
-        view.findViewById<TextView>(R.id.cardDescription).text = stop.vicinity
+        view.findViewById<TextView>(R.id.cardDescription).text = "Bus stop"
         view.findViewById<MaterialCardView>(R.id.cardView).setCardBackgroundColor(ContextCompat.getColor(context, R.color.bkgSection))
 
         // Setup Directions Button
