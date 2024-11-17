@@ -45,6 +45,7 @@ android:layout_height="match_parent">
 
                     <!-- Weather Icon -->
                     <ImageView
+                        android:id="@+id/weatherIcon"
                         android:layout_width="40dp"
                         android:layout_height="40dp"
                         android:src="@drawable/cloud"
@@ -58,15 +59,17 @@ android:layout_height="match_parent">
 
                         <!-- Temperature High and Low -->
                         <TextView
+                            android:id="@+id/highLowText"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="H: 105° L: 78°"
+                            android:text="H: --° L: --°"
                             android:textColor="@color/darkText"
                             android:textSize="18sp"
                             android:textStyle="bold" />
 
                         <!-- Weather Description -->
                         <TextView
+                            android:id="@+id/weatherDescription"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Thunderstorms"
@@ -76,6 +79,7 @@ android:layout_height="match_parent">
 
                         <!-- Date -->
                         <TextView
+                            android:id="@+id/typicalWeatherText"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Typical weather for August 5."
