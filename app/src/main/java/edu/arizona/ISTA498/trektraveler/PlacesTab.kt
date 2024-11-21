@@ -30,6 +30,13 @@ class PlacesTab : Fragment() {
             goToTransitScreen()
         }
 
+        // Set up TextView listener for navigating to NeighborhoodsActivity
+        val goToNeighborhood: View = view.findViewById(R.id.goToNeighborhood)
+        goToNeighborhood.setOnClickListener {
+            goToNeighborhoodScreen()
+        }
+
+
         // Set up button listeners for transit stop locations
         val directionsButton1: Button = view.findViewById(R.id.directionsButton) // Los Reales/Cardinal
         directionsButton1.setOnClickListener {
@@ -37,11 +44,11 @@ class PlacesTab : Fragment() {
             openGoogleMaps(name)
         }
 
-        val directionsButton2: Button = view.findViewById(R.id.directionsButton2) // Cardinal/Pajarito
-        directionsButton2.setOnClickListener {
-            val name = "Cardinal/Pajarito"
-            openGoogleMaps(name)
-        }
+//        val directionsButton2: Button = view.findViewById(R.id.directionsButton2) // Cardinal/Pajarito
+//        directionsButton2.setOnClickListener {
+//            val name = "Cardinal/Pajarito"
+//            openGoogleMaps(name)
+//        }
 
         val directionsBikeButton1: Button = view.findViewById(R.id.bikeRentalDirectionsButton1)
         directionsBikeButton1.setOnClickListener {
@@ -49,11 +56,11 @@ class PlacesTab : Fragment() {
             openGoogleMaps(name)
         }
 
-        val directionsBikeButton2: Button = view.findViewById(R.id.bikeRentalDirectionsButton2)
-        directionsBikeButton2.setOnClickListener {
-            val name = "Ajo Bikes"
-            openGoogleMaps(name)
-        }
+//        val directionsBikeButton2: Button = view.findViewById(R.id.bikeRentalDirectionsButton2)
+//        directionsBikeButton2.setOnClickListener {
+//            val name = "Ajo Bikes"
+//            openGoogleMaps(name)
+//        }
 
         return view
     }
@@ -67,6 +74,11 @@ class PlacesTab : Fragment() {
     // Navigate to the TransitScreen
     private fun goToTransitScreen() {
         val intent = Intent(requireContext(), TransitScreen::class.java)
+        startActivity(intent)
+    }
+
+    private fun goToNeighborhoodScreen() {
+        val intent = Intent(requireContext(), neighorhoods::class.java)
         startActivity(intent)
     }
 

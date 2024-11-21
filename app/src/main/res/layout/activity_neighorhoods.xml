@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bkgSurface"
+    tools:context=".neighorhoods">
+    <!-- Top App Bar -->
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/NeighborhoodAppBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/bkgSection"
+        android:contentInsetStart="0dp"
+        app:navigationIcon="@drawable/back_arrow"
+        app:title="Featured Neighborhoods"
+        app:titleTextColor="@color/darkText"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Card Container -->
+    <LinearLayout
+        android:id="@+id/cardContainerTransit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+
+        <!-- Downtown Tucson Card -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:background="@color/bkgSection"
+            app:cardCornerRadius="8dp"
+            app:strokeColor="@android:color/transparent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp"
+                android:background="@color/bkgSection">
+
+                <!-- Card Title -->
+                <TextView
+                    android:id="@+id/NeighborhoodCardTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Downtown Tucson"
+                    android:textColor="@color/darkText"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <!-- Card Description -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/downtown"
+                    android:textColor="@color/secondaryText"
+                    android:textSize="14sp" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Start Next Card Here -->
+
+
+    </LinearLayout>
+
+</LinearLayout>

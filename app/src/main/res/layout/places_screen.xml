@@ -12,11 +12,11 @@
         android:id="@+id/scrollViewTransit"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginTop="16dp"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent">
+
 
         <!-- Container for Cards -->
         <LinearLayout
@@ -27,18 +27,97 @@
             android:padding="16dp">
 
             <!-- Bike Rentals Section -->
+
             <LinearLayout
-                android:id="@+id/bikeRentalsHeading"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_marginBottom="16dp">
+            android:id="@+id/NeighborhoodHeading"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="16dp">
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
-                    android:layout_gravity="center_vertical">
+                    android:layout_gravity="center_vertical"
+                    android:paddingBottom="8dp"
+                    android:paddingTop="8dp"
+>
+                    <ImageView
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:src="@drawable/map_pin"
+                        app:tint="@color/darkText"
+                        android:contentDescription="map pin"
+                        android:layout_marginEnd="8dp" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Featured Neighborhoods"
+                        android:textAppearance="@style/heading"/>
+
+
+                </LinearLayout>
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/bkgSection"
+                    app:cardCornerRadius="8dp"
+                    app:strokeColor="@android:color/transparent">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="16dp"
+                        android:background="@color/bkgSection">
+
+                        <!-- Card Title -->
+                        <TextView
+                            android:id="@+id/NeighborhoodCardTitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Downtown Tucson"
+                            android:textColor="@color/darkText"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                        <!-- Card Description -->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/downtown"
+                            android:textColor="@color/secondaryText"
+                            android:textSize="14sp" />
+
+
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+
+                <!-- "See More" TextView -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="16dp"
+                    android:paddingTop="16dp"
+                    android:paddingBottom="16dp"
+                    android:layout_gravity="end"
+                    android:text="@string/see_more"
+                    android:id="@+id/goToNeighborhood"
+                    android:textColor="@color/Teal"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="4dp" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_gravity="center_vertical"
+                    android:paddingTop="16dp"
+                    android:paddingBottom="8dp">
                     <ImageView
                         android:layout_width="32dp"
                         android:layout_height="32dp"
@@ -57,7 +136,7 @@
                 <com.google.android.material.card.MaterialCardView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="16dp"
+
                     android:background="@color/bkgSection"
                     app:cardCornerRadius="8dp"
                     app:strokeColor="@android:color/transparent">
@@ -111,62 +190,7 @@
                     </LinearLayout>
                 </com.google.android.material.card.MaterialCardView>
 
-                <!-- Second CardView for Bike Rentals -->
-                <com.google.android.material.card.MaterialCardView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@color/bkgSection"
-                    app:cardCornerRadius="8dp"
-                    app:strokeColor="@android:color/transparent">
 
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:padding="16dp"
-                        android:background="@color/bkgSection">
-
-                        <!-- Card Title -->
-                        <TextView
-                            android:id="@+id/bikeRentalCardTitle2"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Ajo Bikes"
-                            android:textColor="@color/darkText"
-                            android:textSize="18sp"
-                            android:textStyle="bold" />
-
-                        <!-- Card Description -->
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="1301 E Ajo Way #117"
-                            android:textColor="@color/secondaryText"
-                            android:textSize="14sp" />
-
-                        <!-- Buttons for Directions and Website -->
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:orientation="horizontal"
-                            android:layout_marginTop="16dp"
-                            android:gravity="end">
-
-                            <!-- Get Directions Button -->
-                            <Button
-                                android:id="@+id/bikeRentalDirectionsButton2"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginStart="16dp"
-                                android:text="Directions"
-                                android:drawableLeft="@drawable/map_pin"
-                                android:textColor="@color/darkText"
-                                android:backgroundTint="@color/LightBlue"
-                                android:paddingLeft="12dp"
-                                android:paddingRight="16dp"/>
-                        </LinearLayout>
-                    </LinearLayout>
-                </com.google.android.material.card.MaterialCardView>
 
                 <!-- "See More" TextView -->
                 <TextView
@@ -189,7 +213,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:layout_gravity="center_vertical">
+                android:layout_gravity="center_vertical"
+                android:padding="8dp">
                 <ImageView
                     android:layout_width="32dp"
                     android:layout_height="32dp"
@@ -208,7 +233,6 @@
             <com.google.android.material.card.MaterialCardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="16dp"
                 app:cardCornerRadius="8dp"
                 android:background="@color/bkgSection"
                 app:strokeColor="@android:color/transparent">
@@ -262,63 +286,7 @@
                 </LinearLayout>
             </com.google.android.material.card.MaterialCardView>
 
-            <!-- Second CardView for Transit Stops -->
-            <com.google.android.material.card.MaterialCardView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:cardCornerRadius="8dp"
-                android:background="@color/bkgSection"
-                app:strokeColor="@android:color/transparent">
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:padding="16dp"
-                    android:background="@color/bkgSection">
-
-                    <!-- Card Title -->
-                    <TextView
-                        android:id="@+id/cardTitle2"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Cardinal/Pajarito"
-                        android:textColor="@color/darkText"
-                        android:textSize="18sp"
-                        android:textStyle="bold" />
-
-                    <!-- Card Description -->
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Bus stop"
-                        android:textColor="@color/secondaryText"
-                        android:textSize="14sp" />
-
-                    <!-- Buttons for Directions and Website -->
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:layout_marginTop="16dp"
-                        android:gravity="end">
-
-                        <!-- Get Directions Button -->
-                        <Button
-                            android:id="@+id/directionsButton2"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="16dp"
-                            android:text="Directions"
-
-                            android:drawableLeft="@drawable/map_pin"
-                            android:textColor="@color/darkText"
-                            android:backgroundTint="@color/LightBlue"
-                            android:paddingLeft="12dp"
-                            android:paddingRight="16dp"/>
-                    </LinearLayout>
-                </LinearLayout>
-            </com.google.android.material.card.MaterialCardView>
 
             <!-- "See More" TextView -->
             <TextView
