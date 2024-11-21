@@ -1,8 +1,10 @@
 package edu.arizona.ISTA498.trektraveler
 
 import android.os.Bundle
+import android.view.View
 import android.widget.ArrayAdapter
 import android.widget.EditText
+import android.widget.LinearLayout
 import android.widget.ListView
 import android.widget.SearchView
 import androidx.appcompat.app.AppCompatActivity
@@ -12,79 +14,72 @@ import androidx.core.content.ContextCompat
 import com.google.android.material.appbar.MaterialToolbar
 
 class locationSearch : AppCompatActivity() {
-
     companion object {
-        var selectedLocation: String? = null // Static variable to hold the selected location
+        var selectedLocation: String? = null
     }
 
     private lateinit var searchView: SearchView
     private lateinit var listView: ListView
+    private lateinit var noResultsContainer: LinearLayout
     private lateinit var adapter: ArrayAdapter<String>
 
-    // Predefined list of locations
     private val locations = listOf("Tucson, AZ")
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_location_search)
 
-        // Setup toolbar
         val toolbar: Toolbar = findViewById(R.id.toolbar)
         setSupportActionBar(toolbar)
-        supportActionBar?.setDisplayHomeAsUpEnabled(true) // Show back button in toolbar
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
-        // Set up a listener for the navigation icon (back button)
         toolbar.setNavigationOnClickListener {
-            finish() // Close the activity without updating selectedLocation
+            finish()
         }
 
-
-        // Initialize the SearchView and ListView
         searchView = findViewById(R.id.search)
         listView = findViewById(R.id.list_view)
+        noResultsContainer = findViewById(R.id.no_results_container)
 
-
-        // Initialize the ArrayAdapter with an empty list
-        adapter = ArrayAdapter(this, R.layout.list_item, mutableListOf())
+        adapter = ArrayAdapter(this, R.layout.list_item, locations.toMutableList())
         listView.adapter = adapter
 
-        // Set up a TextWatcher to filter the ListView based on user input
         searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
             override fun onQueryTextSubmit(query: String?): Boolean {
                 return false
             }
 
             override fun onQueryTextChange(newText: String?): Boolean {
-                // Clear previous results
                 adapter.clear()
-
-                // Filter the predefined locations based on user input
                 if (!newText.isNullOrEmpty()) {
-                    // Check for matches in the predefined list
-                    for (location in locations) {
-                        if (location.contains(newText, ignoreCase = true)) {
-                            adapter.add(location) // Add matching locations to the adapter
-                        }
+                    val filteredLocations = locations.filter {
+                        it.contains(newText, ignoreCase = true)
                     }
+                    adapter.addAll(filteredLocations)
+                    toggleNoResults(filteredLocations.isEmpty())
+                } else {
+                    adapter.addAll(locations)
+                    toggleNoResults(false)
                 }
-
-                adapter.notifyDataSetChanged() // Notify adapter of changes
+                adapter.notifyDataSetChanged()
                 return true
             }
         })
 
-        // Handle item clicks in the ListView
         listView.setOnItemClickListener { _, _, position, _ ->
             val selected = adapter.getItem(position)
             if (selected != null) {
-                onLocationSelected(selected) // Update the selected location
+                onLocationSelected(selected)
             }
         }
     }
 
-    // Set selectedLocation when the user confirms their selection
+    private fun toggleNoResults(show: Boolean) {
+        noResultsContainer.visibility = if (show) View.VISIBLE else View.GONE
+    }
+
     private fun onLocationSelected(location: String) {
         selectedLocation = location
-        finish() // Close the activity and return
+        finish()
     }
 }
