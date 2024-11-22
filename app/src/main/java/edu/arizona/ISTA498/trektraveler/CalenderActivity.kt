@@ -18,6 +18,8 @@ class CalenderActivity : AppCompatActivity() {
         var selectedDate: String? = null
     }
 
+    private var initialDate: String? = null // Stores the initial date
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -38,6 +40,9 @@ class CalenderActivity : AppCompatActivity() {
         // Set today's date as the minimum date
         val today = Calendar.getInstance()
         calendarView.minDate = today.timeInMillis
+
+        // Store the initial date
+        initialDate = selectedDate
 
         // Check if there's a previously selected date
         if (selectedDate != null) {
@@ -61,6 +66,8 @@ class CalenderActivity : AppCompatActivity() {
 
         // Handle Cancel button click
         cancelButton.setOnClickListener {
+            // Revert selectedDate to the initial state
+            selectedDate = initialDate
             finish() // Finish the activity
         }
 
