@@ -24,7 +24,7 @@
         android:id="@+id/welcomeImage"
         android:layout_width="match_parent"
         android:layout_height="180dp"
-        android:scaleType="centerCrop"
+        android:scaleType="fitStart"
         android:src="@drawable/welcome"
         android:contentDescription="Woman riding bike in field"
         android:visibility="visible"/> <!-- Ensure this is visible -->
