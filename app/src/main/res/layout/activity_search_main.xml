@@ -81,8 +81,6 @@
             android:layout_marginHorizontal="16dp"
             android:backgroundTint="#888888"
             android:text="Search"
-            android:clickable="false"
-            android:onClick="goToCityView"
             android:textColor="@color/inverseText"/>
     </LinearLayout>
 </LinearLayout>

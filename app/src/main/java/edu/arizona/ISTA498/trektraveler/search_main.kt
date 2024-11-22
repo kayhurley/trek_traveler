@@ -47,6 +47,10 @@ class SearchMain : AppCompatActivity() {
 
         if (locationSearch.selectedLocation != null && CalenderActivity.selectedDate != null) {
             searchButton.isClickable = true
+            searchButton.setOnClickListener {
+                val intent = Intent(this, CityActivity::class.java)
+                startActivity(intent)
+            }
             searchButton.backgroundTintList = ColorStateList.valueOf(Color.parseColor("#23707a"))
         }
     }
@@ -61,8 +65,8 @@ class SearchMain : AppCompatActivity() {
         startActivity(intent)
     }
 
-    fun goToCityView(view: View) {
-        val intent = Intent(this, CityActivity::class.java)
-        startActivity(intent)
-    }
+   // fun goToCityView(view: View) {
+   //     val intent = Intent(this, CityActivity::class.java)
+    //    startActivity(intent)
+    //}
 }
