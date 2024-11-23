@@ -3,5 +3,6 @@
     <string name="walkscore_data">Walkscore Data</string>
     <string name="see_more"><u>See More</u></string>
     <string name="downtown">Known for its walkability and vibrant nightlife, Downtown is perfect for single travelers who enjoy art galleries, restaurants, and cultural events. The Sun Link streetcar makes it easy to travel between key areas without a car.</string>
-
+    <string name="checkin"><b>Check-in time:</b> 3:00 PM\n<b>Check-out time:</b> 12:00 PM</string>
+    <string name="hotelinfo">On a Downtown street with restaurants, this trendy hotel is a 13-minute walk from the Tucson Museum of Art and 1 mile from I-10.</string>
 </resources>

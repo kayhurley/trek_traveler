@@ -15,6 +15,12 @@
         android:theme="@style/Theme.TrekTraveler"
         tools:targetApi="31">
         <activity
+            android:name=".HotelInfo"
+            android:exported="false" />
+        <activity
+            android:name=".HotelActivity"
+            android:exported="false" />
+        <activity
             android:name=".neighorhoods"
             android:exported="false" />
         <activity
@@ -29,23 +35,22 @@
         <activity
             android:name=".SearchMain"
             android:exported="true"
-            android:theme="@style/Theme.TrekTraveler"></activity>
+            android:theme="@style/Theme.TrekTraveler" />
         <activity
             android:name=".CalenderActivity"
-            android:theme="@style/Theme.TrekTraveler"></activity>
-
+            android:theme="@style/Theme.TrekTraveler" />
         <activity
             android:name=".CityActivity"
-            android:theme="@style/Theme.TrekTraveler"></activity>
+            android:theme="@style/Theme.TrekTraveler" />
         <activity
             android:name=".locationSearch"
-            android:theme="@style/Theme.TrekTraveler"></activity>
+            android:theme="@style/Theme.TrekTraveler" />
         <activity
             android:name=".BikeScreen"
-            android:theme="@style/Theme.TrekTraveler"></activity>
+            android:theme="@style/Theme.TrekTraveler" />
         <activity
             android:name=".TransitScreen"
-            android:theme="@style/Theme.TrekTraveler"></activity>
+            android:theme="@style/Theme.TrekTraveler" />
     </application>
 
 </manifest>
