@@ -8,6 +8,8 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import android.content.Intent
+import android.widget.ImageView
+import android.widget.TextView
 import java.text.SimpleDateFormat
 import java.util.*
 
@@ -18,62 +20,61 @@ class CalenderActivity : AppCompatActivity() {
         var selectedDate: String? = null
     }
 
-    private var initialDate: String? = null // Stores the initial date
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.cal_screen)
 
-        // Set up window insets for edge-to-edge display
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
-            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
-            insets
-        }
-
-        // Get references to the CalendarView and buttons
         val calendarView: CalendarView = findViewById(R.id.calendarView)
+        val todayButton: ImageView = findViewById(R.id.TodayButton)
+        val todayDate: TextView = findViewById(R.id.todayDate) // Reference to the TextView
         val cancelButton: Button = findViewById(R.id.cancelButton)
         val okButton: Button = findViewById(R.id.okayButton)
 
-        // Set today's date as the minimum date
+        // Get today's date
         val today = Calendar.getInstance()
+        val todayDay = today.get(Calendar.DAY_OF_MONTH) // Extract today's day
+
+        // Set the TextView to display today's day
+        todayDate.text = todayDay.toString()
+
+        // Set the minimum date for the calendar
         calendarView.minDate = today.timeInMillis
 
-        // Store the initial date
-        initialDate = selectedDate
-
-        // Check if there's a previously selected date
+        // Preselect today's date or restore previously selected date
+        val dateFormat = SimpleDateFormat("MMM dd, yyyy", Locale.getDefault())
         if (selectedDate != null) {
-            val dateFormat = SimpleDateFormat("MMM dd, yyyy", Locale.getDefault())
-            val date = dateFormat.parse(selectedDate)
+            val date = dateFormat.parse(selectedDate!!)
             date?.let {
-                calendarView.date = it.time // Set calendar to previously selected date
+                calendarView.date = it.time
             }
         } else {
-            calendarView.date = today.timeInMillis // Default to today’s date if no selected date
+            calendarView.date = today.timeInMillis
         }
 
-        // Set listener to detect date selection and update the selected date
+        // Set listener for date selection
         calendarView.setOnDateChangeListener { _, year, month, dayOfMonth ->
             val selectedCalendar = Calendar.getInstance().apply {
                 set(year, month, dayOfMonth)
             }
-            val selectedDateFormat = SimpleDateFormat("MMM dd, yyyy", Locale.getDefault())
-            selectedDate = selectedDateFormat.format(selectedCalendar.time)
+            selectedDate = dateFormat.format(selectedCalendar.time)
+        }
+
+        // Handle Today button click
+        todayButton.setOnClickListener {
+            calendarView.date = today.timeInMillis // Reset CalendarView to today's date
+            selectedDate = dateFormat.format(today.time) // Update selectedDate
         }
 
         // Handle Cancel button click
         cancelButton.setOnClickListener {
-            // Revert selectedDate to the initial state
-            selectedDate = initialDate
-            finish() // Finish the activity
+            selectedDate = null
+            finish()
         }
 
         // Handle OK button click
         okButton.setOnClickListener {
-            finish() // Finish the activity
+            finish()
         }
     }
 }

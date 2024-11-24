@@ -17,25 +17,57 @@
         android:background="@color/white"
         android:paddingBottom="20dp">
 
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:padding="8dp">
+
+            <!-- ImageView for the Calendar Icon -->
+            <ImageView
+                android:id="@+id/TodayButton"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:src="@drawable/calendar_today"
+                app:tint="@color/Teal"
+                android:contentDescription="Calendar Icon" />
+
+            <!-- TextView for the Date -->
+            <TextView
+                android:id="@+id/todayDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal|bottom"
+                android:layout_marginBottom="8dp"
+                android:text="88"
+                android:textColor="@color/Teal"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textAlignment="center"/>
+        </FrameLayout>
+
+        <!-- Calendar View -->
         <CalendarView
             android:id="@+id/calendarView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:weekDayTextAppearance="@style/WeekdayTextAppearance"/>
+            android:weekDayTextAppearance="@style/WeekdayTextAppearance" />
 
+        <!-- Buttons for Cancel and OK -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:paddingStart="16dp"
             android:paddingEnd="16dp"
             android:gravity="end">
+
             <Button
                 android:id="@+id/cancelButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="@color/secondaryText"
                 android:text="Cancel"
-                android:layout_marginRight="16dp"/>
+                android:layout_marginRight="16dp" />
 
             <Button
                 android:id="@+id/okayButton"

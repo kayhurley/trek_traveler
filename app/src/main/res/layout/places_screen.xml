@@ -137,7 +137,8 @@
                     android:layout_height="wrap_content"
                     android:paddingVertical="8dp"
                     android:text="These accommodations were certified as environmentally sustainable by an independent organization recognized by Google."
-                    android:textSize="14dp"/>
+                    android:textSize="14dp"
+                    android:textColor="@color/darkText"/>
 
                 <!-- Card with Padding -->
                 <com.google.android.material.card.MaterialCardView
@@ -152,7 +153,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="vertical"
-                        android:padding="16dp">
+                        android:padding="16dp"
+                        android:background="@color/bkgSection">
 
                         <!-- Row: Image, Title, Rating, Price -->
                         <LinearLayout
