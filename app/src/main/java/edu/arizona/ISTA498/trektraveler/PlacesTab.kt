@@ -36,6 +36,11 @@ class PlacesTab : Fragment() {
             goToNeighborhoodScreen()
         }
 
+        val goToHotel: View = view.findViewById(R.id.goToHotel)
+        goToHotel.setOnClickListener {
+            goToHotelScreen()
+        }
+
 
         // Set up button listeners for transit stop locations
         val directionsButton1: Button = view.findViewById(R.id.directionsButton) // Los Reales/Cardinal
@@ -79,6 +84,11 @@ class PlacesTab : Fragment() {
 
     private fun goToNeighborhoodScreen() {
         val intent = Intent(requireContext(), neighorhoods::class.java)
+        startActivity(intent)
+    }
+
+    private fun goToHotelScreen() {
+        val intent = Intent(requireContext(), HotelActivity::class.java)
         startActivity(intent)
     }
 

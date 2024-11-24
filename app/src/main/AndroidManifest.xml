@@ -51,6 +51,7 @@
         <activity
             android:name=".TransitScreen"
             android:theme="@style/Theme.TrekTraveler" />
+
     </application>
 
 </manifest>
