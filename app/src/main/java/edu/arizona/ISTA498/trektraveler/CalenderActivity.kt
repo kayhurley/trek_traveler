@@ -22,7 +22,7 @@ class CalenderActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
+        //enableEdgeToEdge()
         setContentView(R.layout.cal_screen)
 
         val calendarView: CalendarView = findViewById(R.id.calendarView)

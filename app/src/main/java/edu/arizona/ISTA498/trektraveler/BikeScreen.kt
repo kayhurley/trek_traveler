@@ -15,7 +15,7 @@ class BikeScreen : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
+        //enableEdgeToEdge()//
         setContentView(R.layout.bike_screen)
 
         // Adjust view to fit system bars (status bar, navigation bar)

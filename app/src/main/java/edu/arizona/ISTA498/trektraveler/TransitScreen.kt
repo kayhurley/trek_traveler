@@ -17,7 +17,7 @@ class TransitScreen : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
+        //enableEdgeToEdge()
         setContentView(R.layout.public_transit_screen)
 
         // Edge-to-edge system bar insets

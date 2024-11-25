@@ -10,7 +10,7 @@ import androidx.core.view.WindowInsetsCompat
 class HotelInfo : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
+        //enableEdgeToEdge()
         setContentView(R.layout.activity_hotel_info)
 
         // Set up the app bar for back navigation
