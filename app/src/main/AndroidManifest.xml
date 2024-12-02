@@ -18,6 +18,9 @@
             android:name=".HotelInfo"
             android:exported="false" />
         <activity
+            android:name=".HotelInfo2"
+            android:exported="false" />
+        <activity
             android:name=".HotelActivity"
             android:exported="false" />
         <activity

@@ -138,6 +138,116 @@
 
         </com.google.android.material.card.MaterialCardView>
 
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/bkgSurface"
+            app:cardCornerRadius="8dp"
+            app:strokeColor="@android:color/transparent"
+            android:layout_marginTop="16dp">
+
+            <!-- Content Inside Card -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp"
+                android:background="@color/bkgSection">
+
+
+                <!-- Row: Image, Title, Rating, Price -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <!-- Hotel Image -->
+                    <ImageView
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:layout_marginEnd="8dp"
+                        android:contentDescription="Hotel Image"
+                        android:src="@drawable/hotel_outside2"
+                        android:scaleType="centerCrop"/>
+
+                    <!-- Title and Rating -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <!-- Title -->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Hampton Inn Tucson Downtown"
+                            android:textColor="@color/darkText"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                        <!-- Rating -->
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical"
+                            android:layout_marginTop="4dp">
+
+                            <ImageView
+                                android:layout_width="24dp"
+                                android:layout_height="24dp"
+                                android:src="@drawable/star" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="4dp"
+                                android:text="4.1"
+                                android:textColor="@color/darkText"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <!-- Price -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="$$"
+                        android:textColor="@color/darkText"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:layout_gravity="top"/>
+                </LinearLayout>
+
+                <!-- Button Row -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="end"
+                    android:paddingTop="16dp">
+
+                    <!-- Info Button -->
+                    <Button
+                        android:id="@+id/hotel2InfoButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Info"
+                        android:drawableLeft="@drawable/info"
+                        android:textColor="@color/darkText"
+                        android:backgroundTint="@color/LightBlue"
+                        android:paddingStart="12dp"
+                        android:paddingEnd="16dp" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
         <ImageView
             android:layout_width="fill_parent"
             android:layout_height="360dp"
