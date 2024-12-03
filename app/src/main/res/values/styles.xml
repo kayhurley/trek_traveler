@@ -19,6 +19,14 @@
         <item name="android:textSize">22sp</item>
         <item name="android:gravity">left</item>
     </style>
+    <style name="RoundedImageView" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">16dp</item> <!-- Adjust corner radius as needed -->
+    </style>
+    <style name="SmallRoundedImageView" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">4dp</item> <!-- Adjust corner radius as needed -->
+    </style>
     <style name="heading" parent="TextAppearance.Widget.AppCompat.Toolbar.Title">
         <item name="android:textStyle">bold</item> <!-- Make text bold -->
         <item name="android:textColor">@color/darkText</item> <!-- Set your desired text color -->

@@ -21,6 +21,10 @@
         app:titleTextColor="@color/darkText"
         />
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
     <!-- Card Container -->
     <LinearLayout
         android:id="@+id/cardContainerTransit"
@@ -165,13 +169,13 @@
                     android:gravity="center_vertical">
 
                     <!-- Hotel Image -->
-                    <ImageView
+                    <com.google.android.material.imageview.ShapeableImageView
                         android:layout_width="48dp"
                         android:layout_height="48dp"
-                        android:layout_marginEnd="8dp"
-                        android:contentDescription="Hotel Image"
                         android:src="@drawable/hotel_outside2"
-                        android:scaleType="centerCrop"/>
+                        android:scaleType="centerCrop"
+                        android:layout_marginRight="8dp"
+                        app:shapeAppearanceOverlay="@style/SmallRoundedImageView" />
 
                     <!-- Title and Rating -->
                     <LinearLayout
@@ -268,5 +272,6 @@
 
 
     </LinearLayout>
+    </ScrollView>
 
 </LinearLayout>
