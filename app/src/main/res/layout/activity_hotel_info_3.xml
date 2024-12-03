@@ -80,21 +80,23 @@
             android:weightSum="2"
             android:paddingHorizontal="16dp">
 
-            <ImageView
+            <com.google.android.material.imageview.ShapeableImageView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:paddingRight="8dp"
                 android:src="@drawable/hotel_outside_3"
-                android:scaleType="centerCrop" />
+                android:scaleType="centerCrop"
+                app:shapeAppearanceOverlay="@style/RoundedImageView" />
 
-            <ImageView
+            <com.google.android.material.imageview.ShapeableImageView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
                 android:src="@drawable/hotel_inside_3"
-                android:scaleType="centerCrop" />
+                android:scaleType="centerCrop"
+                app:shapeAppearanceOverlay="@style/RoundedImageView" />
         </LinearLayout>
 
         <com.google.android.material.card.MaterialCardView
@@ -185,12 +187,15 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:paddingHorizontal="16dp"
-            android:paddingVertical="8dp">
+            android:paddingVertical="8dp"
+            >
 
             <ImageView
                 android:layout_width="24dp"
                 android:layout_height="24dp"
-                android:src="@drawable/ev" />
+                android:src="@drawable/breakfast"
+                app:tint="@color/darkText"/>
+
 
             <TextView
                 android:layout_width="wrap_content"
@@ -282,7 +287,8 @@
             <ImageView
                 android:layout_width="24dp"
                 android:layout_height="24dp"
-                android:src="@drawable/pet" />
+                android:src="@drawable/business"
+                app:tint="@color/darkText" />
 
             <TextView
                 android:layout_width="wrap_content"
