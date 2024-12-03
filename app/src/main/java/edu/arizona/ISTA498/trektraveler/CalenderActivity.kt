@@ -74,6 +74,10 @@ class CalenderActivity : AppCompatActivity() {
 
         // Handle OK button click
         okButton.setOnClickListener {
+            if (selectedDate == null) {
+                selectedDate = dateFormat.format(today.time) // Use today's date as default
+            }
+
             finish()
         }
     }
